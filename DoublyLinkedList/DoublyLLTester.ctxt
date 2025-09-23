@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=DoublyLLTester
+comment0.text=\n\ Tests\ out\ linked\ list\ methods\ that\ I\ created.\n\ \n\ @author\ \ Jonny\ Tang\n\n\ @version\ 9/19/2025\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main\ method.\ Traverses\ a\ created\ doubly\ linked\ list\ forward\ and\ backward.\n\n\ @param\ args\ arguments\ from\ the\ command\ line\n
+numComments=2
