@@ -23,6 +23,7 @@ public class MyArrayList<E>
         {
             s += values[i] + ", ";
         }
+
         return s + values[size - 1] + "]";
     }
 
@@ -52,6 +53,7 @@ public class MyArrayList<E>
 
     public int size()
     {
+        /*
         for (int i=0; i<values.length; i++) 
         {
             if (values[i]==null)
@@ -60,6 +62,8 @@ public class MyArrayList<E>
             }
         }
         return values.length;
+        */
+        return size;
     }
 
     public E get(int index)
@@ -92,7 +96,9 @@ public class MyArrayList<E>
         {
             doubleCapacity();
         }
-        values[size()] = obj;
+        values[size] = obj;
+        
+        size += 1;
         
         return true;
     }
@@ -105,10 +111,6 @@ public class MyArrayList<E>
     */
     public E remove(int index)
     {
-        if (size==0) 
-        {
-            return null;
-        }
         size -= 1;
         
         Object elementRemoved = values[index];
@@ -117,9 +119,20 @@ public class MyArrayList<E>
         {
             values[i] = values[i+1];
         }
+        values[values.length-1] = null;
+                
+        // Shrink capacity code
+        
+        if (size>=2 && values[size/2-1] == null) 
+        {
+            Object[] newValues = new Object[size/2];
+            for (int i=0; i<size; i++) {
+                newValues[i] = values[i];
+            }
+            values = newValues;
+        }
         
         return (E) elementRemoved;
-        //(You will need to promise the return value is of type E.)
     }
 
     public Iterator<E> iterator()
@@ -139,7 +152,6 @@ public class MyArrayList<E>
             doubleCapacity();
         }
         size += 1;
-        System.out.println(size);
         
         for (int i=getCapacity()-1; i>index; i--) 
         {
@@ -157,17 +169,26 @@ public class MyArrayList<E>
 
         public MyArrayListIterator()
         {
-            throw new RuntimeException("INSERT MISSING CODE HERE");
+            nextIndex = 0;
         }
 
         public boolean hasNext()
         {
-            throw new RuntimeException("INSERT MISSING CODE HERE");
+            if (MyArrayList.this.values[nextIndex+1] == null) 
+            {
+                return false;
+            }
+            else 
+            {
+                return true;
+            }
         }
 
         public E next()
         {
-            throw new RuntimeException("INSERT MISSING CODE HERE");
+            nextIndex += 1;
+            
+            return (E) MyArrayList.this.values[nextIndex - 1];
 
             //(You will need to promise the return value is of type E.)
         }
@@ -175,7 +196,20 @@ public class MyArrayList<E>
         //@postcondition removes the last element that was returned by next
         public void remove()
         {
-            throw new RuntimeException("INSERT MISSING CODE HERE");
+            // do not shrink here
+            
+            // remove the element + shift over
+            MyArrayList.this.size -= 1;
+        
+            Object elementRemoved = values[nextIndex];
+            
+            for (int i=nextIndex; i<values.length-1; i++) 
+            {
+                values[i] = values[i+1];
+            }
+            values[values.length-1] = null;
+            
+            nextIndex -= 1;
         }
     }
 }
