@@ -254,67 +254,18 @@ public class Node
         
     }
     
-    /*
-    public Node sort()
-    {
-        boolean running = true;
-        Node currNode = this;
-        Node startNode = this;
-        while (running) 
+    public int size(int s) {
+        if (next==null)
         {
-            if (currNode != null && currNode.next() != null && currNode.next().value()<=currNode.value()) 
-            {
-                System.out.print(currNode.next().value() + " ");
-                System.out.println(currNode.value());
-                // if wrong order, swap the two
-                Node tmpNext = currNode.next();
-                Node tmpPrev = currNode.prev();
-                Node tmpNextNext = currNode.next().next();
-                
-                tmpNext.setPrev(tmpPrev);
-                if (tmpPrev!=null) tmpPrev.setNext(tmpNext);
-                
-                currNode.setNext(tmpNextNext);
-                if (tmpNextNext!=null) tmpNextNext.setPrev(currNode);
-                
-                tmpNext.setNext(currNode);
-                currNode.setPrev(tmpNext);
-                
-                currNode = currNode.next();
-            }
-            else
-            {
-                if (checkSorted(Integer.MIN_VALUE)) 
-                {
-                    running = false;
-                }
-                else 
-                {
-                    currNode = startNode;
-                }
-            }
+            return s;
         }
-        
-        // now, find the first node!
-        return getStart();
+        return next.size(s+1);
     }
-    */
    
-    // sort with recursion
-    public Node sort() {
-        boolean notFinished = true;
-        while (notFinished) {
-            sortHelper();
-            if (checkSorted(Integer.MIN_VALUE)) {
-                
-            }
-        }
-        return getStart();
-    }
+    /* Sort with while loops; merge sort
+     * 
+     */
     
-    private Node sortHelper() {
-        return new Node(1,null);
-    }
     
     private boolean checkSorted(int prevValue) 
     {

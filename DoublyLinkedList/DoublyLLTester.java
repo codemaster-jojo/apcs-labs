@@ -16,6 +16,7 @@ public class DoublyLLTester
      */
     public static void main(String [ ] args)
     {
+        
         Node dll = new Node(1, new Node(2, new Node(3, null)));
         dll.setPrevs();
         
@@ -44,10 +45,15 @@ public class DoublyLLTester
         dll.traverseForward();
         dll.traverseBackward();
         
+       /*
+        Node dll = new Node(2, new Node(3, new Node(1, null)));
+        dll.setPrevs();        
+        
         System.out.println("\nSorting the LinkedList");
         dll = dll.sort();
         dll.traverseForward();
         dll.traverseBackward();
+        */
     }
 
 }

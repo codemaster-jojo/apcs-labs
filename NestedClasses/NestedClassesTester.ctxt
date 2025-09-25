@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=NestedClassesTester
+comment0.text=\n\ Tester\ for\ my\ nested\ classes\n\ \n\ @author\ \ Jonny\ Tang\n\n\ @version\ 9/24/2025\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Tests\ everything\n\n\ @param\ args\ arguments\ from\ the\ command\ line\n
+numComments=2

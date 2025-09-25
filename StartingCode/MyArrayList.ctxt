@@ -1,0 +1,31 @@
+#BlueJ class context
+comment0.target=MyArrayList
+comment1.params=
+comment1.target=MyArrayList()
+comment10.params=
+comment10.target=java.util.Iterator\ iterator()
+comment11.params=index\ obj
+comment11.target=void\ add(int,\ java.lang.Object)
+comment11.text=\n\ @precondition\ \ 0\ <\=\ index\ <\=\ size\n\ @postcondition\ inserts\ obj\ at\ position\ index,\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ moving\ elements\ at\ position\ index\ and\ higher\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ the\ right\ (adds\ 1\ to\ their\ indices)\ and\ adjusts\ size\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=
+comment3.target=void\ doubleCapacity()
+comment3.text=\n\ @postcondition\ replaces\ the\ array\ with\ one\ that\ is\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ twice\ as\ long,\ and\ copies\ all\ of\ the\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ old\ elements\ into\ it\n
+comment4.params=
+comment4.target=int\ getCapacity()
+comment4.text=\n\ @postcondition\ returns\ the\ length\ of\ the\ array\n
+comment5.params=
+comment5.target=int\ size()
+comment6.params=index
+comment6.target=java.lang.Object\ get(int)
+comment7.params=index\ obj
+comment7.target=java.lang.Object\ set(int,\ java.lang.Object)
+comment7.text=\ \n\ @postcondition\ replaces\ the\ element\ at\ position\ index\ with\ obj\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returns\ the\ element\ formerly\ at\ the\ specified\ position\n
+comment8.params=obj
+comment8.target=boolean\ add(java.lang.Object)
+comment8.text=\n\ @postcondition\ appends\ obj\ to\ end\ of\ list;\ returns\ true\n
+comment9.params=index
+comment9.target=java.lang.Object\ remove(int)
+comment9.text=\n\ @postcondition\ removes\ element\ from\ position\ index,\ moving\ elements\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ at\ position\ index\ +\ 1\ and\ higher\ to\ the\ left\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (subtracts\ 1\ from\ their\ indices)\ and\ adjusts\ size\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returns\ the\ element\ formerly\ at\ the\ specified\ position\n
+numComments=12
