@@ -1,0 +1,101 @@
+Project documentation
+<---- javadoc command: ---->
+javadoc
+-sourcepath
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode
+-source
+21
+-classpath
+/Applications/BlueJ.app/Contents/Java/bluejcore.jar:/Applications/BlueJ.app/Contents/Java/javafx-graphics-23.0.2-mac-aarch64.jar:/Applications/BlueJ.app/Contents/Java/javafx-base-23.0.2-mac-aarch64.jar:/Applications/BlueJ.app/Contents/Java/javafx-web-23.0.2-mac-aarch64.jar:/Applications/BlueJ.app/Contents/Java/javafx-controls-23.0.2-mac-aarch64.jar:/Applications/BlueJ.app/Contents/Java/javafx-swing-23.0.2-mac-aarch64.jar:/Applications/BlueJ.app/Contents/Java/javafx-fxml-23.0.2-mac-aarch64.jar:/Applications/BlueJ.app/Contents/Java/javafx-media-23.0.2-mac-aarch64.jar:/Applications/BlueJ.app/Contents/Java/junit-4.12.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-params-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-api-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-engine-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-suite-api-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-vintage-engine-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-engine-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-launcher-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-commons-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/hamcrest-core-1.3.jar:/Applications/BlueJ.app/Contents/Java/opentest4j-1.2.0.jar:/Applications/BlueJ.app/Contents/Java/lang-stride.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.base.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.controls.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.fxml.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.graphics.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.media.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.properties.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.swing.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.web.jar:/Applications/BlueJ.app/Contents/Java/userlib/gridworld.jar:/Applications/BlueJ.app/Contents/Java/userlib/KarelJRobot.jar:/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode
+-d
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-doctitle
+StartingCode
+-windowtitle
+StartingCode
+-author
+-version
+-nodeprecated
+-tag
+precondition:a:Precondition:
+-tag
+postcondition:a:Postcondition:
+-tag
+param
+-tag
+return
+-private
+-Xdoclint:none
+-link
+url.javaStdLib
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyArrayListTester.java
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/DoubleNode.java
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedListTester.java
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyArrayList.java
+<---- end of javadoc command ---->
+Loading source file /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java...
+Loading source file /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyArrayListTester.java...
+Loading source file /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/DoubleNode.java...
+Loading source file /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedListTester.java...
+Loading source file /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyArrayList.java...
+Constructing Javadoc information...
+error: Error reading file: /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/url.javaStdLib/element-list
+Building index for all the packages and classes...
+Standard Doclet version 21.0.6+7-LTS
+Building tree for all the packages and classes...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/DoubleNode.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/MyArrayList.html...
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyArrayList.java:151: warning: invalid input: '<'
+    * @precondition  0 <= index <= size
+                       ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyArrayList.java:151: warning: invalid input: '<'
+    * @precondition  0 <= index <= size
+                                ^
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/MyArrayList.MyArrayListIterator.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/MyArrayListTester.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/MyLinkedList.html...
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:37: warning: invalid input: '<'
+    * @precondition  0 <= index <= size / 2
+                       ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:37: warning: invalid input: '<'
+    * @precondition  0 <= index <= size / 2
+                                ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:56: warning: invalid input: '<'
+    * @precondition  size / 2 <= index < size
+                              ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:56: warning: invalid input: '<'
+    * @precondition  size / 2 <= index < size
+                                       ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:75: warning: invalid input: '<'
+    * @precondition  0 <= index < size
+                       ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:75: warning: invalid input: '<'
+    * @precondition  0 <= index < size
+                                ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:182: warning: invalid input: '<'
+    * @precondition  0 <= index <= size
+                       ^
+/Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/MyLinkedList.java:182: warning: invalid input: '<'
+    * @precondition  0 <= index <= size
+                                ^
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/MyLinkedList.MyLinkedListIterator.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/MyLinkedListTester.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/package-summary.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/package-tree.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/constant-values.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/overview-tree.html...
+Building index for all classes...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/allclasses-index.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/allpackages-index.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/index-all.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/search.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/index.html...
+Generating /Users/jonnyt/Desktop/AP CS Labs/apcs-labs/StartingCode/doc/help-doc.html...
+Note: Custom tags that could override future standard tags:  @precondition, @postcondition. To avoid potential overrides, use at least one period character (.) in custom tag names.
+1 error
+10 warnings

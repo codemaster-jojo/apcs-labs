@@ -1,18 +1,25 @@
 #BlueJ class context
 comment0.target=DoubleNode
-comment0.text=\n\ complete\ commenting\ of\ this\ class\ is\ required\n
+comment0.text=\n\ This\ class\ is\ a\ node\ for\ the\ doubly\ linked\ list.\n\ @author\ Jonny\ Tang,\ creators\ of\ the\ lab\n\ @version\ 9/26/2025\n
 comment1.params=v
 comment1.target=DoubleNode(java.lang.Object)
+comment1.text=\n\ Constructor.\ Creates\ a\ node\ with\ value\ v\ and\ defaults\ to\ setting\ prev\ and\ next\ to\ null.\n\ @param\ v\ the\ value\ that\ the\ node\ is\ getting\ set\ to.\n
 comment2.params=
 comment2.target=java.lang.Object\ getValue()
+comment2.text=\n\ Simple\ getter\ for\ value\n\ @return\ value\n
 comment3.params=
 comment3.target=DoubleNode\ getPrevious()
+comment3.text=\n\ Simple\ getter\ for\ previous\n\ @return\ previous\n
 comment4.params=
 comment4.target=DoubleNode\ getNext()
+comment4.text=\n\ Simple\ getter\ for\ next\n\ @return\ next\n
 comment5.params=v
 comment5.target=void\ setValue(java.lang.Object)
+comment5.text=\n\ Simple\ setter\ for\ value\n\ @param\ v\ \ the\ new\ value\ that\ value\ is\ getting\ set\ to\n
 comment6.params=p
 comment6.target=void\ setPrevious(DoubleNode)
+comment6.text=\n\ Simple\ setter\ for\ previous\n\ @param\ p\ the\ node\ that\ previous\ is\ getting\ set\ to\n
 comment7.params=n
 comment7.target=void\ setNext(DoubleNode)
+comment7.text=\n\ Simple\ setter\ for\ next\n\ @param\ n\ the\ node\ that\ next\ is\ getting\ set\ to.\n
 numComments=8

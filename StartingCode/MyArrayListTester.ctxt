@@ -1,9 +1,13 @@
 #BlueJ class context
 comment0.target=MyArrayListTester
+comment0.text=\n\ This\ class\ is\ a\ tester\ for\ MyArrayList\n\ @author\ creator\ of\ the\ lab\n\ @version\ 9/26/2025\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ This\ method\ tests\ out\ the\ ArrayList\n\ @param\ args\ default\ parameter\ in\ main()\ method\n
 comment2.params=s
 comment2.target=void\ debug(java.lang.String)
+comment2.text=\n\ Debugger.\ Prints\ out\ whatever\ is\ given\ if\ debug\ mode\ is\ on\n\ @param\ s\ the\ thing\ getting\ printed\ out\n
 comment3.params=n
 comment3.target=int\ random(int)
+comment3.text=\n\ Random\ number\ generator.\ Using\ the\ random()\ \n\ @param\ n\ the\ upper\ bound\ for\ the\ random\ value.\n\ @return\ the\ random\ number\ from\ 0\ to\ n\n
 numComments=4

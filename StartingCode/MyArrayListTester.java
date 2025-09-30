@@ -1,10 +1,19 @@
 import java.util.*;
 
+/**
+ * This class is a tester for MyArrayList
+ * @author creator of the lab
+ * @version 9/26/2025
+ */
 public class MyArrayListTester
 {
     //determines whether it prints each operation
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
+    /**
+     * This method tests out the ArrayList
+     * @param args default parameter in main() method
+     */
     public static void main(String[] args)
     {
         MyArrayList<Integer> your = new MyArrayList<Integer>();
@@ -16,17 +25,25 @@ public class MyArrayListTester
             debug("real:  " + real);
 
             if (!your.toString().equals(real.toString()))
+            {
                 throw new RuntimeException("toString doesn't match");
+            }
             if (your.getCapacity() != capacity)
+            {
                 throw new RuntimeException("Capacity is " + your.getCapacity() +
                     " and should be " + capacity);
+            }
             if (your.size() != real.size())
+            {
                 throw new RuntimeException("Size is " + your.size() + " and should be " + real.size());
+            }
 
             for (int index = 0; index < real.size(); index++)
                 if (your.get(index) != real.get(index))
+                {
                     throw new RuntimeException("get(" + index + ") returned " + your.get(index) +
                         " and should return " + real.get(index));
+                }
 
             int op = random(3);
             if (op == 0 && real.size() < 10)
@@ -35,10 +52,14 @@ public class MyArrayListTester
                 debug("add(" + value + ")");
                 real.add(value);
                 if (!your.add(value))
+                {
                     throw new RuntimeException("add(" + value +
                         ") returned false and should return true");
+                    }
                 if (real.size() > capacity)
+                {
                     capacity *= 2;
+                }
             }
             else if (op == 1 && real.size() > 0)
             {
@@ -47,8 +68,10 @@ public class MyArrayListTester
                 Integer realValue = real.remove(index);
                 Integer yourValue = (Integer)your.remove(index);
                 if (realValue != yourValue)
+                {
                     throw new RuntimeException("remove(" + index + ") returned " + yourValue +
                         " and should return " + realValue);
+                }
             }
             else if (real.size() > 0)
             {
@@ -58,8 +81,10 @@ public class MyArrayListTester
                 Integer realOld = real.set(index, value);
                 Integer yourOld = (Integer)your.set(index, value);
                 if (realOld != yourOld)
+                {
                     throw new RuntimeException("set(" + index + ", " + value + ") returned " +
                         yourOld + " and should return " + realOld);
+                }
             }
         }
 
@@ -92,10 +117,10 @@ public class MyArrayListTester
                 debug("Whoops ... something's wrong");
                 throw new RuntimeException("it.next( ) returned " +
                      yourVal + " and should return " + value);
-           }
-         debug("it.next() returned " +
+            } 
+             debug("it.next() returned " +
                      yourVal + " and matches get(" + index +") which returned " + value);
-         index++;   
+             index++;   
         }
         
         your_it = yourit.iterator();
@@ -115,13 +140,24 @@ public class MyArrayListTester
         System.out.println("Now you truly win!!!");
     }
 
-
+    
+    /*
+     * Debugger. Prints out whatever is given if debug mode is on
+     * @param s the thing getting printed out
+     */
     private static void debug(String s)
     {
         if (DEBUG)
+        {
             System.out.println(s);
+        }
     }
-
+    
+    /*
+     * Random number generator. Using the random() 
+     * @param n the upper bound for the random value.
+     * @return the random number from 0 to n
+     */
     private static int random(int n)
     {
         return (int)(Math.random() * n);
