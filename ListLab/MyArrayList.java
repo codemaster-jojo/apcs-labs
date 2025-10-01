@@ -5,6 +5,8 @@ import java.util.ListIterator;
  * This is my implementation of an arraylist
  * @author Jonny Tang and writers of the lab
  * @version 9/29/2025
+ * 
+ * @param <E> the type that the array list will consist of
  */
 public class MyArrayList<E>
 {
@@ -94,6 +96,7 @@ public class MyArrayList<E>
      * @param obj  the object that you're setting the value to
      * @postcondition replaces the element at position index with obj
      *               returns the element formerly at the specified position
+     * @return the previous value
     */
     public E set(int index, E obj)
     {
@@ -107,6 +110,7 @@ public class MyArrayList<E>
      * Adds object to the end
      * @param obj the object you're appending
      * @postcondition appends obj to end of list; returns true
+     * @return true
     */
     public boolean add(E obj)
     {
@@ -122,52 +126,11 @@ public class MyArrayList<E>
         
         return true;
     }
-
-    /**
-     * @Removes element at index index
-     * @param index the index of the element getting removed
-     * @postcondition removes element from position index, moving elements
-     *               at position index + 1 and higher to the left
-     *               (subtracts 1 from their indices) and adjusts size
-     *               returns the element formerly at the specified position
-    */
-    public E remove(int index)
-    {
-        size -= 1;
-        
-        Object elementRemoved = values[index];
-        
-        for (int i=index; i<values.length-1; i++) 
-        {
-            values[i] = values[i+1];
-        }
-        values[values.length-1] = null;
-                
-        // Shrink capacity code
-        
-        if (size>=2 && values[size/2-1] == null) 
-        {
-            Object[] newValues = new Object[size/2];
-            for (int i=0; i<size; i++) {
-                newValues[i] = values[i];
-            }
-            values = newValues;
-        }
-        
-        return (E) elementRemoved;
-    }
-
-    /**
-     * Creates iterator and returns it
-     * @return the iterator
-     */
-    public Iterator<E> iterator()
-    {
-        return new MyArrayListIterator();
-    }
-
+    
     /**
      * Adds value at index index and value of object
+     * @param index the index that the element is getting added to
+     * @param obj the value of the object getting added
      * @precondition  0 <= index <= size
      * @postcondition inserts obj at position index,
      *               moving elements at position index and higher
@@ -190,6 +153,52 @@ public class MyArrayList<E>
                 
     }
 
+    /**
+     * Removes element at index index
+     * @param index the index of the element getting removed
+     * @postcondition removes element from position index, moving elements
+     *               at position index + 1 and higher to the left
+     *               (subtracts 1 from their indices) and adjusts size
+     *               returns the element formerly at the specified position
+     * @return the element that was removed
+    */
+    public E remove(int index)
+    {
+        size -= 1;
+        
+        Object elementRemoved = values[index];
+        
+        for (int i=index; i<values.length-1; i++) 
+        {
+            values[i] = values[i+1];
+        }
+        values[values.length-1] = null;
+                
+        // Shrink capacity code
+        
+        if (size>=2 && values[size/2-1] == null) 
+        {
+            Object[] newValues = new Object[size/2];
+            for (int i=0; i<size; i++) 
+            {
+                newValues[i] = values[i];
+            }
+            values = newValues;
+        }
+        
+        return (E) elementRemoved;
+    }
+
+    /**
+     * Creates iterator and returns it
+     * @return the iterator
+     */
+    public Iterator<E> iterator()
+    {
+        return new MyArrayListIterator();
+    }
+    
+    
     private class MyArrayListIterator implements Iterator<E>
     {
         //the index of the value that will be returned by next()
@@ -209,14 +218,7 @@ public class MyArrayList<E>
          */
         public boolean hasNext()
         {
-            if (MyArrayList.this.values[nextIndex+1] == null) 
-            {
-                return false;
-            }
-            else 
-            {
-                return true;
-            }
+            return (MyArrayList.this.values[nextIndex+1] != null);
         }
 
         /**

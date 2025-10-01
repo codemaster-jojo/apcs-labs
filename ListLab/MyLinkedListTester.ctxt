@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=MyLinkedListTester
+comment0.text=\n\ Tester\ method\ for\ linked\ list\n\ @author\ writers\ of\ the\ lab\ and\ Jonny\ Tang\n\ @version\ 9/29/2025\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Tester\ for\ linked\ list\ methods\n\ \n\ @param\ args\ standard\ inputs\ for\ a\ main\ method\n
+comment2.params=s
+comment2.target=void\ debug(java.lang.String)
+comment2.text=\n\ Prints\ stuff\ if\ debug\ is\ on\n\ @param\ s\ the\ stuff\ getting\ printed\n
+comment3.params=n
+comment3.target=int\ random(int)
+comment3.text=\n\ Gets\ a\ random\ integer\ from\ 0\ to\ n\n\ @param\ n\ the\ max\ of\ the\ random\ number\n\ @return\ the\ random\ number\n
+numComments=4

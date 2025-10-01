@@ -5,6 +5,7 @@ import java.util.ListIterator;
  * This class is my linked list created from DoubleNode
  * @author Jonny Tang and creators of the lab
  * @version 9/26/2025
+ * @param <E> the type that the linked list will consist of
  */
 public class MyLinkedList<E>
 {
@@ -30,7 +31,9 @@ public class MyLinkedList<E>
     {
         DoubleNode node = first;
         if (node == null)
+        {
             return "[]";
+        }
         String s = "[";
         while (node.getNext() != null)
         {
@@ -126,8 +129,12 @@ public class MyLinkedList<E>
     }
 
     /** 
+     * Sets node at index to object
+     * @param index the index of the node getting set
+     * @param obj the value that it's getting set to
      * @postcondition replaces the element at position index with obj
      *               returns the element formerly at the specified position
+     * @return the element formerly at index
      */
     public E set(int index, E obj)
     {
@@ -139,7 +146,10 @@ public class MyLinkedList<E>
     }
 
     /**
-    * @postcondition appends obj to end of list; returns true
+     * Adds to the end
+     * @param obj the value getting appended to the end
+     * @postcondition appends obj to end of list; returns true
+     * @return true
     */
     public boolean add(E obj)
     {
@@ -162,12 +172,48 @@ public class MyLinkedList<E>
         
         return true;
     }
+    
+    /** 
+     * Adds obj at index index
+     * @param index the index where the object is getting added
+     * @param obj the value of the node getting added
+     * @precondition  0 <= index <= size
+     * @postcondition inserts obj at position index,
+     *                moving elements at position index and higher
+     *                to the right (adds 1 to their indices) and adjusts size
+    */
+    public void add(int index, E obj)
+    {
+        if (index==0) 
+        {
+            addFirst(obj);
+        }
+        else
+        {
+            DoubleNode n = new DoubleNode(obj);
+        
+            DoubleNode curr = first;
+            while (index>0) 
+            {
+                curr = curr.getNext();
+                index--;
+            }
+            
+            curr.getPrevious().setNext(n);
+            n.setPrevious(curr.getPrevious());
+            n.setNext(curr);
+            size++;
+        }
+    }
 
     /** 
-    * @postcondition removes element from position index, moving elements
-    *               at position index + 1 and higher to the left
-    *               (subtracts 1 from their indices) and adjusts size
-                   returns the element formerly at the specified position
+     * Removes element at index
+     * @param index the index of the element getting removed
+     * @postcondition removes element from position index, moving elements
+     *               at position index + 1 and higher to the left
+     *               (subtracts 1 from their indices) and adjusts size
+     *               returns the element formerly at the specified position
+     * @return the value of the element that was removed
     */
     public E remove(int index)
     {
@@ -204,33 +250,12 @@ public class MyLinkedList<E>
         return val;
     }
 
-    /** 
-    * @precondition  0 <= index <= size
-    * @postcondition inserts obj at position index,
-    *                moving elements at position index and higher
-    *                to the right (adds 1 to their indices) and adjusts size
-    */
-    public void add(int index, E obj)
-    {
-        if (index==0) addFirst(obj);
-        else
-        {
-            DoubleNode n = new DoubleNode(obj);
-        
-            DoubleNode curr = first;
-            while (index>0) 
-            {
-                curr = curr.getNext();
-                index--;
-            }
-            
-            curr.getPrevious().setNext(n);
-            n.setPrevious(curr.getPrevious());
-            n.setNext(curr);
-            size++;
-        }
-    }
+    
 
+    /**
+     * Adds to the beginning of the linked list.
+     * @param obj the value of the object getting added to the beginning
+     */
     public void addFirst(E obj)
     {
         DoubleNode n = new DoubleNode(obj);
@@ -240,6 +265,10 @@ public class MyLinkedList<E>
         size++;
     }
 
+    /**
+     * Adds to the end of the linked list
+     * @param obj the value of the object getting added to the end
+     */
     public void addLast(E obj)
     {
         DoubleNode n = new DoubleNode(obj);
@@ -249,16 +278,28 @@ public class MyLinkedList<E>
         size++;
     }
 
+    /**
+     * gets the value of the head
+     * @return the value of the head
+     */
     public E getFirst()
     {
         return (E) first.getValue();
     }
 
+    /**
+     * Gets the value of the tail
+     * @return the value of the tail
+     */
     public E getLast()
     {
         return (E) last.getValue();
     }
 
+    /**
+     * Removes the first element of the linked list
+     * @return the value of the first element of the linked list
+     */
     public E removeFirst()
     {
         E val = (E) first.getValue();
@@ -273,6 +314,10 @@ public class MyLinkedList<E>
         return val;
     }
 
+    /**
+     * Removes the last element of the linked list
+     * @return the value of the element getting removed
+     */
     public E removeLast()
     {
         E val = (E) last.getValue();
@@ -283,26 +328,46 @@ public class MyLinkedList<E>
         return val;
     }
 
+    /**
+     * Creates an iterator
+     * @return the iterator geting created
+     */
     public Iterator<E> iterator()
     {
         return new MyLinkedListIterator();
     }
 
+    /**
+     * Linked list iterator
+     * @author Jonny Tang
+     * @version 9/29/2025
+     */
     private class MyLinkedListIterator implements Iterator<E>
     {
         private DoubleNode nextNode;
-
+        
+        /**
+         * Creates a linked list iterator and sets defaults
+         */
         public MyLinkedListIterator()
         {
             nextNode = new DoubleNode(1);
             nextNode.setNext(MyLinkedList.this.first);
         }
-
+        
+        /**
+         * Returns whether there's a next value in the linked list
+         * @return true or false depending on if there's a next value in the linked list
+         */
         public boolean hasNext()
         {
-           return nextNode.getNext()==null;
+            return nextNode.getNext()==null;
         }
 
+        /**
+         * Traverses to the next element and returns the next element value
+         * @return the next element value
+         */
         public E next()
         {            
             nextNode = nextNode.getNext();
@@ -311,7 +376,10 @@ public class MyLinkedList<E>
 
         }
 
-        //@postcondition removes the last element that was returned by next
+        /**
+         * Removes the last element returned by next
+         * @postcondition removes the last element that was returned by next
+         */
         public void remove()
         {
             nextNode.getPrevious().setNext(nextNode.getNext());

@@ -1,8 +1,14 @@
 #BlueJ package file
-editor.fx.0.height=0
-editor.fx.0.width=0
+dependency1.from=MyLinkedList
+dependency1.to=DoubleNode
+dependency1.type=UsesDependency
+dependency2.from=MyLinkedListTester
+dependency2.to=MyLinkedList
+dependency2.type=UsesDependency
+editor.fx.0.height=875
+editor.fx.0.width=1512
 editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.y=38
 objectbench.height=100
 objectbench.width=776
 package.divider.horizontal=0.6
@@ -13,7 +19,7 @@ package.editor.x=20
 package.editor.y=58
 package.frame.height=600
 package.frame.width=800
-package.numDependencies=0
+package.numDependencies=2
 package.numTargets=5
 package.showExtends=true
 package.showUses=true

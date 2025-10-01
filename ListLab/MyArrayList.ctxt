@@ -1,0 +1,37 @@
+#BlueJ class context
+comment0.target=MyArrayList
+comment0.text=\n\ This\ is\ my\ implementation\ of\ an\ arraylist\n\ @author\ Jonny\ Tang\ and\ writers\ of\ the\ lab\n\ @version\ 9/29/2025\n\ \n\ @param\ <E>\ the\ type\ that\ the\ array\ list\ will\ consist\ of\n
+comment1.params=
+comment1.target=MyArrayList()
+comment1.text=\n\ Constructor\ for\ the\ array\ list\n
+comment10.params=index
+comment10.target=java.lang.Object\ remove(int)
+comment10.text=\n\ Removes\ element\ at\ index\ index\n\ @param\ index\ the\ index\ of\ the\ element\ getting\ removed\n\ @postcondition\ removes\ element\ from\ position\ index,\ moving\ elements\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ at\ position\ index\ +\ 1\ and\ higher\ to\ the\ left\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (subtracts\ 1\ from\ their\ indices)\ and\ adjusts\ size\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returns\ the\ element\ formerly\ at\ the\ specified\ position\n\ @return\ the\ element\ that\ was\ removed\n
+comment11.params=
+comment11.target=java.util.Iterator\ iterator()
+comment11.text=\n\ Creates\ iterator\ and\ returns\ it\n\ @return\ the\ iterator\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\n\ Returns\ the\ array\ to\ a\ string\ in\ the\ format\ [a1,\ a2..an]\n\ @return\ the\ string\n
+comment3.params=
+comment3.target=void\ doubleCapacity()
+comment3.text=\n\ Doubles\ the\ capacity\ of\ the\ array\n\ @postcondition\ replaces\ the\ array\ with\ one\ that\ is\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ twice\ as\ long,\ and\ copies\ all\ of\ the\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ old\ elements\ into\ it\n
+comment4.params=
+comment4.target=int\ getCapacity()
+comment4.text=\n\ Gets\ the\ capacity\ of\ the\ arraylist\n\ @postcondition\ returns\ the\ length\ of\ the\ array\n\ @return\ the\ length\ of\ the\ array\ (the\ capacity)\n
+comment5.params=
+comment5.target=int\ size()
+comment5.text=\n\ Getter\ for\ the\ size\ of\ the\ array\n\ @return\ \ the\ size\ of\ the\ arraylist\ (i.e.\ the\ number\ of\ filled\ slots\ in\ the\ array)\n
+comment6.params=index
+comment6.target=java.lang.Object\ get(int)
+comment6.text=\n\ Gets\ the\ value\ at\ the\ index\n\ @precondition\ index\ must\ be\ in\ range\n\ @param\ index\ \ the\ index\ of\ the\ value\ you're\ getting\n\ @return\ the\ value\ at\ the\ given\ index\n
+comment7.params=index\ obj
+comment7.target=java.lang.Object\ set(int,\ java.lang.Object)
+comment7.text=\ \n\ Sets\ value\ at\ index\ [index]\ to\ value\ [object]\n\ @param\ index\ \ the\ index\ of\ the\ value\ you're\ setting\n\ @param\ obj\ \ the\ object\ that\ you're\ setting\ the\ value\ to\n\ @postcondition\ replaces\ the\ element\ at\ position\ index\ with\ obj\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returns\ the\ element\ formerly\ at\ the\ specified\ position\n\ @return\ the\ previous\ value\n
+comment8.params=obj
+comment8.target=boolean\ add(java.lang.Object)
+comment8.text=\n\ Adds\ object\ to\ the\ end\n\ @param\ obj\ the\ object\ you're\ appending\n\ @postcondition\ appends\ obj\ to\ end\ of\ list;\ returns\ true\n\ @return\ true\n
+comment9.params=index\ obj
+comment9.target=void\ add(int,\ java.lang.Object)
+comment9.text=\n\ Adds\ value\ at\ index\ index\ and\ value\ of\ object\n\ @param\ index\ the\ index\ that\ the\ element\ is\ getting\ added\ to\n\ @param\ obj\ the\ value\ of\ the\ object\ getting\ added\n\ @precondition\ \ 0\ <\=\ index\ <\=\ size\n\ @postcondition\ inserts\ obj\ at\ position\ index,\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ moving\ elements\ at\ position\ index\ and\ higher\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ the\ right\ (adds\ 1\ to\ their\ indices)\ and\ adjusts\ size\n
+numComments=12

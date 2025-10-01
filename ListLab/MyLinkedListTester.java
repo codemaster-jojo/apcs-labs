@@ -1,23 +1,24 @@
 import java.util.*;
 
 /**
- * This class is a tester for MyArrayList
- * @author creator of the lab
- * @version 9/26/2025
+ * Tester method for linked list
+ * @author writers of the lab and Jonny Tang
+ * @version 9/29/2025
  */
-public class MyArrayListTester
+public class MyLinkedListTester
 {
     //determines whether it prints each operation
     private static final boolean DEBUG = false;
 
     /**
-     * This method tests out the ArrayList
-     * @param args default parameter in main() method
+     * Tester for linked list methods
+     * 
+     * @param args standard inputs for a main method
      */
     public static void main(String[] args)
     {
-        MyArrayList<Integer> your = new MyArrayList<Integer>();
-        ArrayList<Integer> real = new ArrayList<Integer>();
+        MyLinkedList<Integer> your = new MyLinkedList<Integer>();
+        LinkedList<Integer> real = new LinkedList<Integer>();
         int capacity = 1;
         for (int i = 0; i < 1000; i++)
         {
@@ -28,22 +29,20 @@ public class MyArrayListTester
             {
                 throw new RuntimeException("toString doesn't match");
             }
-            if (your.getCapacity() != capacity)
-            {
-                throw new RuntimeException("Capacity is " + your.getCapacity() +
-                    " and should be " + capacity);
-            }
             if (your.size() != real.size())
             {
-                throw new RuntimeException("Size is " + your.size() + " and should be " + real.size());
+                throw new RuntimeException("Size is " + your.size() + 
+                    " and should be " + real.size());
             }
 
             for (int index = 0; index < real.size(); index++)
+            {
                 if (your.get(index) != real.get(index))
                 {
                     throw new RuntimeException("get(" + index + ") returned " + your.get(index) +
                         " and should return " + real.get(index));
                 }
+            }
 
             int op = random(3);
             if (op == 0 && real.size() < 10)
@@ -55,7 +54,7 @@ public class MyArrayListTester
                 {
                     throw new RuntimeException("add(" + value +
                         ") returned false and should return true");
-                    }
+                }
                 if (real.size() > capacity)
                 {
                     capacity *= 2;
@@ -77,7 +76,7 @@ public class MyArrayListTester
             {
                 Integer value = new Integer(random(100));
                 int index = random(real.size());
-                debug("set(" + index + ", " + value + ")")  ;
+                debug("set(" + index + ", " + value + ")");
                 Integer realOld = real.set(index, value);
                 Integer yourOld = (Integer)your.set(index, value);
                 if (realOld != yourOld)
@@ -89,61 +88,11 @@ public class MyArrayListTester
         }
 
         System.out.println("You win!");
-
-        System.out.println("Okay! Now lets have a look at your iterator :");
-        
-        MyArrayList<Integer> yourit = new MyArrayList<Integer>();
-        ArrayList<Integer> realit = new ArrayList<Integer>();
-    
-        for (int i=10; i<100; i+=10)
-        {
-            yourit.add(i);
-            realit.add(i);
-        }
-        
-        debug("your:  " + yourit);
-        debug("real:  " + realit);
-        
-        Iterator<Integer> your_it = yourit.iterator();
-        Integer yourVal;
-        Integer value;
-        int index=0;
-        while (your_it.hasNext())
-        {
-            yourVal = your_it.next();
-            value = realit.get(index);
-            if (!(yourVal == value))
-            {
-                debug("Whoops ... something's wrong");
-                throw new RuntimeException("it.next( ) returned " +
-                     yourVal + " and should return " + value);
-            } 
-             debug("it.next() returned " +
-                     yourVal + " and matches get(" + index +") which returned " + value);
-             index++;   
-        }
-        
-        your_it = yourit.iterator();
-        while (your_it.hasNext())
-        {
-            yourVal = your_it.next();
-            if (yourVal == 20)
-            {
-                debug("Calling remove() removed  " + yourVal);
-                your_it.remove();                               
-            }
-        }        
-
-        debug("your:  " + yourit);
-        //debug("real:  " + realit);
-        
-        System.out.println("Now you truly win!!!");
     }
 
-    
-    /*
-     * Debugger. Prints out whatever is given if debug mode is on
-     * @param s the thing getting printed out
+    /**
+     * Prints stuff if debug is on
+     * @param s the stuff getting printed
      */
     private static void debug(String s)
     {
@@ -152,11 +101,11 @@ public class MyArrayListTester
             System.out.println(s);
         }
     }
-    
-    /*
-     * Random number generator. Using the random() 
-     * @param n the upper bound for the random value.
-     * @return the random number from 0 to n
+
+    /**
+     * Gets a random integer from 0 to n
+     * @param n the max of the random number
+     * @return the random number
      */
     private static int random(int n)
     {
