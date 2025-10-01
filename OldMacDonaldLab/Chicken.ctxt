@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Chicken
+comment0.text=\n\ Chicken\ class\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/1/2025\n
+comment1.params=
+comment1.target=Chicken()
+comment1.text=\n\ Constructors\ for\ objects\ of\ class\ Chicken\n
+comment2.params=chickenType
+comment2.target=Chicken(java.lang.String)
+comment2.text=\n\ Constructors\ for\ objects\ of\ class\ Chicken\n\ \n\ @param\ chickenType\ the\ common\ name\n
+comment3.params=
+comment3.target=java.lang.String\ speak()
+comment3.text=\n\ Says\ bawk\ bawk\n\ \n\ @return\ bawk\n
+numComments=4

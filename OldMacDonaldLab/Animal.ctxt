@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Animal
+comment0.text=\n\ Animal\ abstract\ class\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/1/2025\n
+comment1.params=ltnN\ cmnN
+comment1.target=Animal(java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Animal\ with\ given\ latin\ name\ and\ common\ name\n\ \n\ @param\ ltnN\ the\ latin\ name\n\ @param\ cmnN\ the\ common\ name\n
+comment2.params=
+comment2.target=java.lang.String\ latinName()
+comment2.text=\n\ Accessor\ for\ latin\ name\n\n\ @return\ \ \ \ the\ latin\ name\n
+comment3.params=
+comment3.target=java.lang.String\ commonName()
+comment3.text=\n\ Accessor\ for\ common\ name\n\n\ @return\ \ \ \ the\ common\ name\n
+comment4.params=l
+comment4.target=void\ setLatinName(java.lang.String)
+comment4.text=\n\ Mutator\ for\ latin\ name\n\n\ @param\ l\ \ \ \ the\ latin\ name\n
+comment5.params=c
+comment5.target=void\ setCommonName(java.lang.String)
+comment5.text=\n\ Mutator\ for\ common\ name\n\n\ @param\ c\ \ \ \ the\ common\ name\n
+comment6.params=
+comment6.target=java.lang.String\ speak()
+comment6.text=\n\ Abstract\ class\ to\ speak\n\ \n\ @return\ a\ string\ thats\ what\ the\ animal's\ speaking\n
+comment7.params=other
+comment7.target=int\ compareTo(Animal)
+comment7.text=\n\ Implements\ compareTo\ in\ comparable\ interface\n\ \n\ @param\ other\ the\ other\ that\ its\ compared\ to\n\ @return\ integer\ representing\ which\ one\ is\ greater\ and\ by\ how\ much\n
+numComments=8

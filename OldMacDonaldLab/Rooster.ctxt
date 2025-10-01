@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Rooster
+comment0.text=\n\ Rooster\ class\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/1/2025\n
+comment1.params=
+comment1.target=Rooster()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Rooster\n
+comment2.params=
+comment2.target=java.lang.String\ speak()
+comment2.text=\n\ Says\ cockadoodledoo\n\n\ @return\ \ \ \ cock-a-doodle-doo\n
+numComments=3

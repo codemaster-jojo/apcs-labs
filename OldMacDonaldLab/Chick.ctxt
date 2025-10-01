@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Chick
+comment0.text=\n\ Chick\ class\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/1/2025\n
+comment1.params=
+comment1.target=Chick()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Chick\n
+comment2.params=
+comment2.target=java.lang.String\ speak()
+comment2.text=\n\ Says\ peep\n\n\ @return\ \ \ \ peep\n
+numComments=3
