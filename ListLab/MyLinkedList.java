@@ -259,9 +259,18 @@ public class MyLinkedList<E>
     public void addFirst(E obj)
     {
         DoubleNode n = new DoubleNode(obj);
-        first.setPrevious(n);
-        n.setNext(first);
-        first = n;
+        
+        if (size == 0) {
+            first = n;
+            last = n;
+        } 
+        else 
+        {
+            first.setPrevious(n);
+            n.setNext(first);
+            first = n;
+        }
+        
         size++;
     }
 
@@ -272,9 +281,19 @@ public class MyLinkedList<E>
     public void addLast(E obj)
     {
         DoubleNode n = new DoubleNode(obj);
-        last.setNext(n);
-        n.setPrevious(last);
-        last = n;
+        
+        if (size == 0) 
+        {
+            first = n;
+            last = n;
+        } 
+        else 
+        {
+            last.setNext(n);
+            n.setPrevious(last);
+            last = n;
+        }
+        
         size++;
     }
 
@@ -342,48 +361,65 @@ public class MyLinkedList<E>
      * @author Jonny Tang
      * @version 9/29/2025
      */
-    private class MyLinkedListIterator implements Iterator<E>
-    {
+    private class MyLinkedListIterator implements Iterator<E> {
         private DoubleNode nextNode;
-        
+        private DoubleNode lastReturned;
+    
         /**
          * Creates a linked list iterator and sets defaults
          */
-        public MyLinkedListIterator()
-        {
-            nextNode = new DoubleNode(1);
-            nextNode.setNext(MyLinkedList.this.first);
+        public MyLinkedListIterator() {
+            nextNode = first;
+            lastReturned = null;
         }
-        
+    
         /**
          * Returns whether there's a next value in the linked list
-         * @return true or false depending on if there's a next value in the linked list
+         * @return true or false depending on if there's a next value
          */
-        public boolean hasNext()
-        {
-            return nextNode.getNext()==null;
+        public boolean hasNext() {
+            return nextNode != null;
         }
-
+    
         /**
          * Traverses to the next element and returns the next element value
          * @return the next element value
          */
-        public E next()
-        {            
+        public E next() {
+            lastReturned = nextNode;
+            E value = (E) nextNode.getValue();
             nextNode = nextNode.getNext();
-            
-            return (E) nextNode.getValue();
-
+            return value;
         }
-
+    
         /**
          * Removes the last element returned by next
          * @postcondition removes the last element that was returned by next
          */
-        public void remove()
-        {
-            nextNode.getPrevious().setNext(nextNode.getNext());
-            nextNode.getNext().setPrevious(nextNode.getPrevious());
+        public void remove() {
+            DoubleNode prev = lastReturned.getPrevious();
+            DoubleNode next = lastReturned.getNext();
+    
+            if (prev != null) 
+            {
+                prev.setNext(next);
+            } 
+            else 
+            {
+                first = next;
+            }
+    
+            if (next != null) 
+            {
+                next.setPrevious(prev);
+            } 
+            else 
+            {
+                last = prev;
+            }
+    
+            size--;
+            lastReturned = null;
         }
     }
 }
