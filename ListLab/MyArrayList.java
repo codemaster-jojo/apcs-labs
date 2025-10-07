@@ -198,6 +198,14 @@ public class MyArrayList<E>
         return new MyArrayListIterator();
     }
     
+    /**
+     * Creates iterator and returns it
+     * @return the iterator
+     */
+    public ListIterator<E> listIterator()
+    {
+        return new MyArrayListListIterator();
+    }
     
     private class MyArrayListIterator implements Iterator<E>
     {
@@ -209,7 +217,7 @@ public class MyArrayList<E>
          */
         public MyArrayListIterator()
         {
-            nextIndex = 0;
+            nextIndex = -1;
         }
 
         /**
@@ -229,7 +237,7 @@ public class MyArrayList<E>
         {
             nextIndex += 1;
             
-            return (E) MyArrayList.this.values[nextIndex - 1];
+            return (E) MyArrayList.this.values[nextIndex];
 
             //(You will need to promise the return value is of type E.)
         }
@@ -254,6 +262,130 @@ public class MyArrayList<E>
             values[values.length-1] = null;
             
             nextIndex -= 1;
+        }
+    }
+    
+    private class MyArrayListListIterator implements ListIterator<E>
+    {
+        //the index of the value that will be returned by next()
+        private int nextIndex;
+
+        /**
+         * Creates an arraylist iterator with nextIndex = 0.
+         */
+        public MyArrayListListIterator()
+        {
+            nextIndex = -1;
+        }
+
+        /**
+         * True/false depending on if there's a next value or not
+         * @return boolean representing if there's a next or not
+         */
+        public boolean hasNext()
+        {
+            return (MyArrayList.this.values[nextIndex+1] != null);
+        }
+        
+        /**
+         * True/false depending on if there's a previous value or not
+         * @return boolean representing if there's a previous or not
+         */
+        public boolean hasPrevious()
+        {
+            if (nextIndex<=0) 
+            {
+                return false;
+            }
+            return (MyArrayList.this.values[nextIndex-1] != null);
+        }
+
+        /**
+         * Sets the pointer to the next element and returns it
+         * @return the value of the next element
+         */
+        public E next()
+        {
+            nextIndex += 1;
+            
+            return (E) MyArrayList.this.values[nextIndex];
+
+            //(You will need to promise the return value is of type E.)
+        }
+        
+        /**
+         * Sets the pointer to the previous element and returns it
+         * @return the value of the previous element
+         */
+        public E previous()
+        {
+            nextIndex -= 1;
+            
+            return (E) MyArrayList.this.values[nextIndex+1];
+
+            //(You will need to promise the return value is of type E.)
+        }
+        
+        /**
+         * Returns the index of the next value. does not traverse.
+         * 
+         * @return index that will be the index of value returned by next()
+         */
+        public int nextIndex()
+        {
+            return nextIndex+1;
+        }
+        
+        /**
+         * Returns the index of the previous. does not traverse.
+         * 
+         * @return index that will be the index of value returned by previous()
+         */
+        public int previousIndex()
+        {
+            return nextIndex-1;
+        }
+
+        /**
+         * Removes the element returned by "next"
+         * @postcondition removes the last element that was returned by next
+         */
+        public void remove()
+        {
+            // do not shrink here
+            
+            // remove the element + shift over
+            MyArrayList.this.size -= 1;
+        
+            Object elementRemoved = values[nextIndex];
+            
+            for (int i=nextIndex; i<values.length-1; i++) 
+            {
+                values[i] = values[i+1];
+            }
+            values[values.length-1] = null;
+            
+            nextIndex -= 1;
+        }
+        
+        /**
+         * Sets the last returned element to whatever is passed in
+         * 
+         * @param e the element getting set
+         */
+        public void set(E e)
+        {
+            MyArrayList.this.values[nextIndex] = e;
+        }
+        
+        /**
+         * Adds passed in element to the array list
+         * 
+         * @param e the element getting added
+         */
+        public void add(E e)
+        {
+            MyArrayList.this.add(nextIndex, e);
         }
     }
 }

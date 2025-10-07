@@ -260,7 +260,8 @@ public class MyLinkedList<E>
     {
         DoubleNode n = new DoubleNode(obj);
         
-        if (size == 0) {
+        if (size == 0) 
+        {
             first = n;
             last = n;
         } 
@@ -361,14 +362,17 @@ public class MyLinkedList<E>
      * @author Jonny Tang
      * @version 9/29/2025
      */
-    private class MyLinkedListIterator implements Iterator<E> {
+    private class MyLinkedListIterator implements Iterator<E> 
+    
+    {
         private DoubleNode nextNode;
         private DoubleNode lastReturned;
     
         /**
          * Creates a linked list iterator and sets defaults
          */
-        public MyLinkedListIterator() {
+        public MyLinkedListIterator() 
+        {
             nextNode = first;
             lastReturned = null;
         }
@@ -377,7 +381,8 @@ public class MyLinkedList<E>
          * Returns whether there's a next value in the linked list
          * @return true or false depending on if there's a next value
          */
-        public boolean hasNext() {
+        public boolean hasNext() 
+        {
             return nextNode != null;
         }
     
@@ -385,7 +390,8 @@ public class MyLinkedList<E>
          * Traverses to the next element and returns the next element value
          * @return the next element value
          */
-        public E next() {
+        public E next() 
+        {
             lastReturned = nextNode;
             E value = (E) nextNode.getValue();
             nextNode = nextNode.getNext();
@@ -396,7 +402,8 @@ public class MyLinkedList<E>
          * Removes the last element returned by next
          * @postcondition removes the last element that was returned by next
          */
-        public void remove() {
+        public void remove() 
+        {
             DoubleNode prev = lastReturned.getPrevious();
             DoubleNode next = lastReturned.getNext();
     

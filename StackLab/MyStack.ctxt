@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=MyStack
+comment0.text=\n\ Implementation\ of\ stack\ using\ linked\ list\n\n\ @param\ <E>\ generic\n\ @author\ Jonny\ Tang\n\ @version\ 10/7/2025\n
+comment1.params=
+comment1.target=MyStack()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyStack\n
+comment2.params=
+comment2.target=boolean\ empty()
+comment2.text=\n\ Checks\ if\ the\ stack\ is\ empty\n\n\ @return\ \ \ \ whether\ the\ stack\ is\ empty\ or\ not\n
+comment3.params=
+comment3.target=java.lang.Object\ peek()
+comment3.text=\n\ Returns\ the\ top\n\ \n\ @return\ top\n
+comment4.params=
+comment4.target=java.lang.Object\ pop()
+comment4.text=\n\ Pops\ the\ first\ element,\ then\ returns\ that\ element\n\ \n\ @return\ the\ element\ that's\ popped\n
+comment5.params=n
+comment5.target=java.lang.Object\ push(java.lang.Object)
+comment5.text=\n\ Adds\ one\ element\ to\ the\ top\ of\ the\ stack\n\ \n\ @param\ n\ the\ element\ added\n\ \n\ @return\ the\ element\ added\n
+comment6.params=val
+comment6.target=int\ search(java.lang.Object)
+comment6.text=\n\ Searches\ for\ the\ element\ passed\ in\n\ \n\ @param\ val\ the\ value\ getting\ searched\ for\n\ @return\ the\ 1-index\ of\ the\ element\n
+comment7.params=
+comment7.target=int\ size()
+comment7.text=\n\ Gets\ the\ size\ by\ popping\ all\ elements\ and\ counting\ and\ then\ putting\ it\ all\ back.\n\ \n\ @return\ the\ size\n
+numComments=8

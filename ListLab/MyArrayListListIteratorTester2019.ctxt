@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=MyArrayListListIteratorTester2019
+comment0.text=\n\ Tester\ for\ the\ array\ list.\ Tests\ ListIterator\n\ @author\ lab\ writers\n\ @version\ 10/3/2025\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main\ method\ that\ tests\ out\ everything\n\ \n\ @param\ args\ standard\ args\ that\ main\ passes\n
+comment2.params=s
+comment2.target=void\ debug(java.lang.String)
+comment2.text=\n\ Debugger.\ Prints\ stuff\ if\ debug\ is\ true\n\ @param\ s\ the\ string\ thats\ getting\ printed\n
+comment3.params=n
+comment3.target=int\ random(int)
+comment3.text=\n\ Gets\ random\ number\ from\ 0\ to\ n\n\ @param\ n\ the\ upper\ limit\ for\ random\n\ @return\ the\ random\ number\n
+numComments=4
