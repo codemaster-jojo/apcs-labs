@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Expressions
+comment0.text=\n\ Class\ to\ make\ infix\ to\ postfix\ and\ evaluate\ expressions\ with\ order\ of\ \n\ operations.\ Match\ parenthesis\ method\ included.\n\ \n\ @author\ Anu\ Datar,\ Jonny\ Tang\n\ @version\ 10/14/2025\n
+comment1.params=expression
+comment1.target=boolean\ matchParenthesis(java.lang.String)
+comment1.text=\n\ parenthesis\ matching\ \:\ An\ expression\ is\ said\ to\ be\ balanced\ if\n\ every\ opener\ has\ a\ corresponding\ closer,\ in\ the\ right\ order\n\ {,\ [\ or\ (\ are\ the\ only\ types\ of\ brackets\ allowed\n\ \ \ \ \ \n\ @param\ \ \ expression\ containing\ operands\ operators\ \n\ \ \ \ \ \ \ \ \ \ and\ any\ of\ the\ 3\ supportedbrackets\n\ @return\ \ true\ is\ the\ parenthesis\ are\ balanced\ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ false\ otherwise\n
+comment2.params=expr
+comment2.target=java.lang.String\ infixToPostfix(java.lang.String)
+comment2.text=\n\ returns\ a\ string\ in\ postfix\ form\ \n\ if\ given\ an\ expression\ in\ infix\ form\ as\ a\ parameter\n\ does\ this\ conversion\ using\ a\ Stack\n\ \n\ @precondition\ everything\ is\ separated\ by\ spaces\:\ i.e.\ "(\ 1\ +\ 3\ )\ *\ 5";\ "(1\ +\ 3)\ *\ 5"\ doesn't\ work.\ \n\ @param\ expr\ valid\ expression\ in\ infix\ form\n\ @return\ equivalent\ expression\ in\ postfix\ form\n
+comment3.params=expr
+comment3.target=double\ evalPostfix(java.lang.String)
+comment3.text=\n\ returns\ the\ value\ of\ an\ expression\ in\ postfix\ form\n\ does\ this\ computation\ using\ a\ Stack\n\ @param\ expr\ valid\ expression\ in\ postfix\ form\n\ @return\ value\ of\ the\ expression\n\ @precondition\ postfix\ expression\ \ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contains\ numbers\ and\ operators\ +\ -\ *\ /\ and\ %\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ and\ that\ operands\ and\ operators\ are\ separated\ by\ spaces\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\n\ Main\ method\ to\ test\ my\ implementations\n\ \n\ @param\ args\ standard\ arguments\ for\ main\ method\n
+comment5.params=expr\ expect
+comment5.target=void\ test(java.lang.String,\ double)
+comment5.text=\n\ Tester\ to\ test\ my\ implementations\n\ \n\ @param\ expr\ the\ expression\ that\ is\ getting\ evaluated\n\ @param\ expect\ the\ expected\ output\n
+comment6.params=ex\ expected
+comment6.target=void\ testBalanced(java.lang.String,\ boolean)
+comment6.text=\n\ Tests\ the\ match\ parentheses\n\ \n\ @param\ ex\ the\ expression\n\ @param\ expected\ the\ expected\ output\ (true/false)\n
+numComments=7
