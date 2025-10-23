@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Solitaire
-comment0.text=\n\ Solitaire\ game\n\ @author\ writers\ of\ this\ lab,\ Jonny\ Tang\n\ @version\ 10/16/2025\n
+comment0.text=\n\ Solitaire\ game\n\ \n\ Extra\ Credit\ List\:\n\ \ \ -\ View\ 3\ cards\ from\ waste\n\ \ \ -\ R\ key\ press\ to\ reset\ the\ game\n\ \ \ -\ U\ key\ press\ to\ undo\ last\ move\n\ \n\ @author\ writers\ of\ this\ lab,\ Jonny\ Tang\n\ @version\ 10/16/2025\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment1.text=\n\ Main\ method\n\ @param\ args\ standard\ main\ method\ args\n
@@ -37,6 +37,9 @@ comment19.text=\n\ Checks\ if\ you\ can\ add\ a\ given\ card\ to\ the\ foundatio
 comment2.params=
 comment2.target=Solitaire()
 comment2.text=\n\ Constructor\ for\ solitaire\n
+comment20.params=
+comment20.target=void\ restart()
+comment20.text=\n\ Restarts\ the\ game.\ Also\ restarts\ undo\ pile.\n\ @postcondition\ all\ the\ cards\ are\ set\ like\ when\ the\ game\ just\ started.\n
 comment3.params=
 comment3.target=Card\ getStockCard()
 comment3.text=\n\ returns\ the\ card\ on\ top\ of\ the\ stock,\n\ or\ null\ if\ the\ stock\ is\ empty\n\ \n\ @return\ the\ top\ of\ the\ stock\ stack\n
@@ -58,4 +61,4 @@ comment8.text=\n\ Called\ when\ the\ stock\ is\ clicked\n
 comment9.params=
 comment9.target=void\ wasteClicked()
 comment9.text=\n\ Called\ when\ the\ waste\ is\ clicked.\n
-numComments=20
+numComments=21

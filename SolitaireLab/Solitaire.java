@@ -2,6 +2,12 @@ import java.util.*;
 
 /**
  * Solitaire game
+ * 
+ * Extra Credit List:
+ *   - View 3 cards from waste
+ *   - R key press to reset the game
+ *   - U key press to undo last move
+ * 
  * @author writers of this lab, Jonny Tang
  * @version 10/16/2025
  */
@@ -21,6 +27,8 @@ public class Solitaire
     private Stack<Card>[] foundations;
     private Stack<Card>[] piles;
     private SolitaireDisplay display;
+    
+    private Stack<String> moves; // used for undo function
 
     /**
      * Constructor for solitaire
@@ -43,6 +51,9 @@ public class Solitaire
         stock = new Stack<Card>();
         waste = new Stack<Card>();
 
+        moves = new Stack<String>();
+        
+        
         createStock();
         deal();
 
@@ -419,5 +430,31 @@ public class Solitaire
             return false;
         }
         return (foundations[index].peek().getRank() + 1 == card.getRank()) && (foundations[index].peek().getSuit() == card.getSuit());
+    }
+    
+    /**
+     * Restarts the game. Also restarts undo pile.
+     * @postcondition all the cards are set like when the game just started.
+     */
+    public void restart()
+    {
+        // Copied from constructor.
+        for (int i=0; i<4; i++)
+        {
+            foundations[i] = new Stack<Card>();
+        }
+        
+        for (int i=0; i<7; i++)
+        {
+            piles[i] = new Stack<Card>();
+        }
+        
+        stock = new Stack<Card>();
+        waste = new Stack<Card>();
+        
+        moves = new Stack<String>();
+
+        createStock();
+        deal();
     }
 }
