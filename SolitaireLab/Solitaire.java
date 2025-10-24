@@ -244,6 +244,14 @@ public class Solitaire
                 addToPile(tmp, display.selectedPile());
             }
         }
+        
+        else if (piles[index].empty() && display.isWasteSelected())
+        {
+            moves.push("W0P" + index);
+            piles[index].push(waste.pop());
+            display.unselect();
+        }
+        
         else if (!piles[index].peek().isFaceUp()) // if face down, flip to face up
         {
             piles[index].peek().turnUp();
