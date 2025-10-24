@@ -453,7 +453,8 @@ public class Solitaire
         {
             return false;
         }
-        return (foundations[index].peek().getRank() + 1 == card.getRank()) && (foundations[index].peek().getSuit() == card.getSuit());
+        return (foundations[index].peek().getRank() + 1 == card.getRank())
+                && (foundations[index].peek().getSuit() == card.getSuit());
     }
     
     /**
@@ -484,10 +485,14 @@ public class Solitaire
     
     /**
      * Undoes last move. Can undo all the way to beginning of the game.
-     * Move is in format [From][To] where From/To are P, F, W, S, and indexes (0 if no index) for piles, foundations, waste, stock.
-     * Also there is Q (arbitrarily chosen) that means flip the card at whatever pile number
+     * Move is in format [From][To] where From/To are P, F, W, S,
+     * and indexes (0 if no index) for piles, foundations, waste, stock.
+     * Also there is Q (arbitrarily chosen) that means flip
+     * the card at whatever pile number
      * Moves from [To] -> [From]
-     * ex. if I move a card from waste to pile 2 (zero indexing) i would write "W0P2" and undo would move card from pile 2 to waste.
+     * ex. if I move a card from waste to pile 2 (zero indexing)
+     * i would write "W0P2" and undo would move card from
+     * pile 2 to waste.
      */
     public void undo()
     {
@@ -498,13 +503,11 @@ public class Solitaire
         
         String move = moves.pop();
         
-        String move1 = move.substring(0,1);
-        int index1 = Integer.parseInt(move.substring(1,2));
-        String move2 = move.substring(2,3);
-        int index2 = Integer.parseInt(move.substring(3,4));
+        String move1 = move.substring(0, 1);
+        int index1 = Integer.parseInt(move.substring(1, 2));
+        String move2 = move.substring(2, 3);
+        int index2 = Integer.parseInt(move.substring(3, 4));
         
-        System.out.println("UNDOING " + move);
-
         if (move1.equals("Q"))
         {
             piles[index1].peek().turnDown();
@@ -535,11 +538,6 @@ public class Solitaire
             }
             
             // pile to stock does not exist
-        }
-        else if (move1.equals("F"))
-        {
-            // There is no possible move that moves something from foundation to somewhere else.
-            return;
         }
         else if (move1.equals("W"))
         {
