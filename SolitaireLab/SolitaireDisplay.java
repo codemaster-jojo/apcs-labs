@@ -188,8 +188,14 @@ public class SolitaireDisplay extends JComponent implements MouseListener, KeyLi
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
-        if (code == KeyEvent.VK_R) { // example: restart
+        if (code == KeyEvent.VK_R) 
+        {
             game.restart();
+            repaint();
+        }
+        else if (code==KeyEvent.VK_U)
+        {
+            game.undo();
             repaint();
         }
     }
