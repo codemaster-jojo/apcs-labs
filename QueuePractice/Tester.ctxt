@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Tester
+comment0.text=\n\ Tests\ out\ my\ cafeteria\ system\n\ \n\ @author\ \ Jonny\ Tang\n\n\ @version\ \ 10/29/2025\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Tester\ for\ my\ cafeteria\n\n\ @param\ args\ arguments\ from\ the\ command\ line\n
+numComments=2

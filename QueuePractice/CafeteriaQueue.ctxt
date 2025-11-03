@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=CafeteriaQueue
+comment0.text=\n\ Simulates\ a\ line\ at\ a\ cafeteria\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/29/2025\n
+comment1.params=
+comment1.target=CafeteriaQueue()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ CafeteriaQueue\n
+comment2.params=name\ studentID\ gradeLevel
+comment2.target=void\ addStudent(java.lang.String,\ int,\ java.lang.String)
+comment2.text=\n\ Adds\ student\ to\ the\ queue\n\ \n\ @param\ name\ the\ name\ of\ the\ student\n\ @param\ studentID\ student\ ID\n\ @param\ gradeLevel\ the\ grade\ level\ of\ the\ student\n
+comment3.params=
+comment3.target=Student\ serveStudent()
+comment3.text=\n\ Serves\ the\ next\ student\n\ \n\ @return\ the\ next\ student\ in\ line\ \n\ (the\ one\ that\ got\ removed)\n
+comment4.params=
+comment4.target=Student\ peekNextStudent()
+comment4.text=\n\ Checks\ which\ student\ is\ next\n\ \n\ @return\ the\ next\ student\ in\ line\n
+comment5.params=
+comment5.target=int\ getQueueSize()
+comment5.text=\n\ Gets\ the\ size\ of\ the\ line.\n\ \n\ @return\ the\ size\ of\ the\ line.\n
+numComments=6

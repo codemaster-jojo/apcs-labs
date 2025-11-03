@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=ArrayQueue
+comment0.text=\n\ My\ implementation\ of\ a\ Queue\ using\ array.\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/29/2025\n\ \n\ @param\ <E>\ is\ to\ make\ generic\n
+comment1.params=
+comment1.target=ArrayQueue()
+comment1.text=\n\ Creates\ a\ queue\ with\ given\ capacity\ (max\ line\ length\n\ basically)\n\ \n
+comment2.params=element
+comment2.target=boolean\ offer(java.lang.Object)
+comment2.text=\n\ Adds\ an\ element\ to\ the\ end\ of\ the\ queue\n\ @param\ element\ the\ element\ getting\ added\n\ @return\ whether\ the\ thing\ was\ added\ properly\ or\ not.\n
+comment3.params=
+comment3.target=java.lang.Object\ poll()
+comment3.text=\n\ Removes\ and\ returns\ the\ top\ of\ the\ queue\ (first\ in).\ \n\ Returns\ null\ if\ the\ queue\ is\ empty.\n\ @return\ the\ element\ that\ just\ got\ removed.\n
+comment4.params=
+comment4.target=java.lang.Object\ peek()
+comment4.text=\n\ Returns\ the\ front\ element\ without\ removing\ it.\ \n\ @return\ the\ element\ on\ the\ top\n
+comment5.params=
+comment5.target=java.lang.Object\ remove()
+comment5.text=\n\ Removes\ the\ front\ element\ of\ the\ queue.\n\ \n\ @return\ the\ front\ element\ of\ the\ queue.\n
+comment6.params=
+comment6.target=boolean\ isEmpty()
+comment6.text=\n\ Returns\ whether\ the\ queue\ is\ empty\ or\ not\n\ \n\ @return\ whether\ the\ queue\ is\ empty\ or\ not.\n
+comment7.params=
+comment7.target=int\ size()
+comment7.text=\n\ Returns\ the\ number\ of\ elements\ in\ the\ queue\n\ right\ now\ (size,\ not\ capacity)\n\ \n\ @return\ the\ size\ of\ the\ queue.\n
+numComments=8

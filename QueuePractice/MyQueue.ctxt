@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=MyQueue
+comment0.text=\n\ My\ interface\ of\ a\ queue\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/29/2025\n\ \n\ @param\ <E>\ to\ make\ generic;\ the\ type\ of\ the\ queue\n
+comment1.params=element
+comment1.target=boolean\ offer(java.lang.Object)
+comment1.text=\n\ "offers"\ a\ value\ to\ put\ at\ the\ end\ of\ the\ queue\n\ will\ not\ put\ it\ if\ the\ queue\ is\ full\n\ \n\ @param\ element\ the\ element\ getting\ offered\n\ @return\ whether\ the\ element\ was\ successfully\ added\n
+comment2.params=
+comment2.target=java.lang.Object\ poll()
+comment2.text=\n\ Removes\ the\ next\ element\ and\ returns\ the\ element\ removed\n\ Null\ if\ no\ elements\ left\ to\ remove\n\ \n\ @return\ the\ element\ returned\ or\ null\n
+comment3.params=
+comment3.target=java.lang.Object\ peek()
+comment3.text=\n\ Checks\ the\ next\ element\ in\ line\n\ \n\ @return\ the\ first\ in\ line\n
+comment4.params=
+comment4.target=java.lang.Object\ remove()
+comment4.text=\n\ Like\ poll,\ but\ will\ throw\ exception\ if\ nothing\ left\n\ \n\ @return\ the\ element\ returned\n
+comment5.params=
+comment5.target=boolean\ isEmpty()
+comment5.text=\n\ Checks\ if\ queue\ is\ empty\n\ \n\ @return\ whether\ queue\ is\ empty\ or\ not\n
+comment6.params=
+comment6.target=int\ size()
+comment6.text=\n\ Gets\ size\ of\ queue\n\ \n\ @return\ size\ of\ queue\n
+numComments=7

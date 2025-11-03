@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Student
+comment0.text=\n\ Student\ class\ for\ the\ cafeteria\n\n\ @author\ Jonny\ Tang\n\ @version\ 10/29/2025\n
+comment1.params=n\ id\ g
+comment1.target=Student(java.lang.String,\ int,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Student\n\ \n\ @param\ n\ name\n\ @param\ id\ studentID\n\ @param\ g\ gradeLevel\ (freshman\ to\ senior)\n
+comment2.params=
+comment2.target=java.lang.String\ name()
+comment2.text=\n\ Getter\ for\ name\n\ \n\ @return\ the\ student's\ name\n
+comment3.params=
+comment3.target=int\ id()
+comment3.text=\n\ Getter\ for\ student\ ID\n\ \n\ @return\ the\ student's\ ID\n
+comment4.params=
+comment4.target=java.lang.String\ grade()
+comment4.text=\n\ Getter\ for\ grade\ level\n\ \n\ @return\ the\ student's\ grade\ level\n
+numComments=5
