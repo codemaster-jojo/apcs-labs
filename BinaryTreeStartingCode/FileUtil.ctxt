@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=FileUtil
+comment0.text=\n\ File\ utility\ to\ save\ and\ load\ trees\n\ \n\ @author\ authors\ of\ the\ lab\n\ @version\ 11/7/2025\n
+comment1.params=fileName
+comment1.target=java.util.Iterator\ loadFile(java.lang.String)
+comment1.text=\n\ Loads\ a\ file\ in\ \n\ @param\ fileName\ the\ name\ of\ the\ file\n\ \n\ @return\ iterator\ to\ the\ first\ element\ of\ the\ file's\ contents\n
+comment2.params=fileName\ data
+comment2.target=void\ saveFile(java.lang.String,\ java.util.Iterator)
+comment2.text=\n\ This\ saves\ a\ given\ tree\ into\ a\ file\n\ \n\ @param\ fileName\ the\ name\ of\ the\ file\n\ @param\ data\ the\ data\ to\ save\ into\ the\ file\n
+numComments=3

@@ -59,6 +59,7 @@ public class Expressions
         }
         return parentheses.empty();
     }
+    
     /**
      * returns a string in postfix form 
      * if given an expression in infix form as a parameter
