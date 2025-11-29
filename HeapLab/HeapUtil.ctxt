@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=HeapUtil
+comment0.text=\n\ Heap\ utility\ class\ with\ a\ bunch\ of\ heap\ methods\n\n\ @author\ Jonny\ Tang\n\ @version\ 11/20/2025\n
+comment1.params=hs
+comment1.target=HeapUtil(int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ HeapUtil\n\ \n\ @param\ hs\ the\ heap\ size\n
+numComments=2

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=HeapDisplay
+comment0.text=\n\ the\ provided\ heap\ display\ class\n\ \n\ @author\ writers\ of\ this\ lab\n\ @version\ 11/20/2025\n
+comment1.params=
+comment1.target=HeapDisplay()
+comment1.text=\n\ Constructs\ the\ object\n
+comment2.params=heapArray\ heapSize
+comment2.target=void\ displayHeap(java.lang.Comparable[],\ int)
+comment2.text=\n\ Displays\ heap\ provided\ as\ array\n\ \n\ @param\ heapArray\ the\ heap\n\ @param\ heapSize\ the\ size\ of\ the\ heap\n
+comment3.params=heapArray\ heapSize
+comment3.target=TreeNode\ heapArrayToTree(java.lang.Comparable[],\ int)
+comment3.text=\n\ convert\ a\ binary\ tree\ stored\ as\ an\ array\ into\ a\ TreeNode\ based\ tree\n\ so\ that\ it\ can\ be\ displayed\ using\ the\ TreeDisplay\n\ @param\ heapArray\ -\ the\ array\ representation\ of\ the\ tree\n\ @param\ heapSize\ is\ the\ current\ size\ of\ the\ heap.\ \ It\ starts\ at\ location\ 1\ in\n\ \ \ \ \ \ \ \ the\ heapArray\ and\ ends\ at\ location\ heapSize\n\ @return\ a\ TreeNode\ representation\ of\ the\ tree\n
+numComments=4
