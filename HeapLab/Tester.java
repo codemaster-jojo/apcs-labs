@@ -25,8 +25,14 @@ public class Tester
         }
         
         HeapDisplay display = new HeapDisplay();
+        HeapUtil util = new HeapUtil(11);
+                
+        util.buildHeap(arr);
         
         display.displayHeap(arr, 11);
+        
+        Comparable[] sorted = util.heapSort(arr);
+        display.displayHeap(sorted,11);
     }
 
 }
