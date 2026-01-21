@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Jury
+comment0.text=\n\ Jury\:\ array\ of\ judges\n\ This\ is\ where\ the\ decisions\ are\ made\n\n\ @author\ Jonny\ Tang,\ Damien\ Wang\n\ @version\ 12/08/2025\n
+comment1.params=judges
+comment1.target=Jury(Judge[])
+comment1.text=\n\ Simple\ constructor\ for\ jury.\ Takes\ in\ an\ array\ of\ judges\n\ \n\ @param\ judges\ the\ array\ of\ judges\n
+comment2.params=
+comment2.target=Judge[]\ getJury()
+comment2.text=\n\ Getter\ for\ jury\n\ \n\ @return\ jury\n
+comment3.params=
+comment3.target=int\ getSize()
+comment3.text=\n\ Getter\ for\ size\n\ \n\ @return\ size\ of\ jury\n
+comment4.params=crime
+comment4.target=boolean\ isGuilty(java.lang.String)
+comment4.text=\n\ Determines\ if\ person\ is\ guilty\ or\ innocent\n\ Some\ randomness\ to\ it.\n\ \n\ @param\ crime\ the\ crime\ committed\n\ @return\ whether\ criminal\ will\ be\ guilty\ or\ not\n
+comment5.params=
+comment5.target=void\ introduce()
+comment5.text=\n\ Introduces\ every\ jury\ member\n\ @postcondition\ member\ intros\ are\ printed.\n
+numComments=6

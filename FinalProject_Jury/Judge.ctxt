@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Judge
+comment0.text=\n\ Judge\ on\ the\ case.\ Inherits\ from\ person\ class\n\n\ @author\ Jonny\ Tang,\ Damien\ Wang\n\ @version\ 12/08/2025\n
+comment1.params=a\ g\ n\ l\ ic\ in
+comment1.target=Judge(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean,\ boolean)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Judge\n\ \n\ @param\ a\ the\ age\n\ @param\ g\ the\ gender\n\ @param\ n\ the\ name\n\ @param\ l\ place\ of\ living\n\ \n\ @param\ ic\ is\ corrupt\n\ @param\ in\ is\ nice\n
+comment2.params=a\ g\ n\ l
+comment2.target=Judge(int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.text=\n\ Constructor\ for\ objects\ of\ class\ Judge\n\ OVERLOADING\ ->\ corrupt\ and\ nice\ defaults\ to\ both\ false.\n\ \n\ @param\ a\ the\ age\n\ @param\ g\ the\ gender\n\ @param\ n\ the\ name\n\ @param\ l\ place\ of\ living\n
+comment3.params=
+comment3.target=void\ selfIntro()
+comment3.text=\n\ Is\ a\ method\ that\ introduces\ the\ judge\n
+numComments=4

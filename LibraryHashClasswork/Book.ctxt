@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Book
+comment0.text=\n\ Book\ class\n\ ID\ format\:\ DD-LLL\n\ D\ \=\ digit,\ L\ \=\ letter\ of\ alphabet\n\n\ @author\ Jonny\ Tang\n\ @version\ 1/12/2026\n
+comment1.params=t\ i
+comment1.target=Book(java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Book\n\ \n\ @param\ t\ the\ title\n\ @param\ i\ the\ id\n
+comment2.params=
+comment2.target=java.lang.String\ getId()
+comment2.text=\n\ getter\ for\ id\n\ \n\ @return\ id\n
+comment3.params=
+comment3.target=java.lang.String\ getTitle()
+comment3.text=\n\ getter\ for\ title\n\ \n\ @return\ title\n
+comment4.params=obj
+comment4.target=boolean\ equals(java.lang.Object)
+comment4.text=\n\ Overrides\ equals\ to\ check\ if\ id\ is\ same\n\ @param\ obj\ the\ object\ getting\ equaled\ to\n\ @return\ whether\ the\ object\ is\ equal\ to\ obj\n
+comment5.params=
+comment5.target=int\ hashCode()
+comment5.text=\n\ Overrides\ hash\ method\ using\ id\n\ \n\ @return\ the\ hash\ code\ of\ object\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\n\ Item\ to\ string.\n
+numComments=7

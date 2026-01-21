@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Library
+comment0.text=\n\ Library\ class,\ hash\ table\ for\ books\n\ using\ separate\ chaining\n\n\ @author\ Jonny\ Tang\n\ @version\ 1/12/2026\n
+comment1.params=
+comment1.target=Library()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Library\n
+comment2.params=book
+comment2.target=void\ addBook(Book)
+comment2.text=\n\ Adds\ book\n\ \n\ @param\ book\ the\ book\n
+comment3.params=book
+comment3.target=boolean\ searchBook(Book)
+comment3.text=\n\ Searches\ library\ for\ book\n\ \n\ @param\ book\ the\ book\n\ @return\ if\ its\ in\ the\ library\n
+comment4.params=
+comment4.target=void\ display()
+comment4.text=\n\ Displays\ the\ library\n
+numComments=5

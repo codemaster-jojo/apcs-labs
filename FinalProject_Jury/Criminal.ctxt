@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Criminal
+comment0.text=\n\ Criminal\ on\ trial.\ Inherits\ from\ person\ class\n\n\ @author\ Jonny\ Tang,\ Damien\ Wang\n\ @version\ 12/08/2025\n
+comment1.params=a\ g\ n\ l\ c
+comment1.target=Criminal(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Criminal\n\ \n\ @param\ a\ the\ age\n\ @param\ g\ the\ gender\n\ @param\ n\ the\ name\n\ @param\ l\ place\ of\ living\n\ @param\ c\ crime\n
+comment2.params=
+comment2.target=void\ selfIntro()
+comment2.text=\n\ Gives\ all\ of\ info\ about\ the\ cirminal\n
+numComments=3

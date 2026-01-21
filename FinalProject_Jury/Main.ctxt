@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Main
+comment0.text=\n\ Used\ to\ simulate\ a\ court\ case\n\ \n\ @author\ Damien\ and\ Jonny\n\ \ \ With\ assistance\ from\ \n\n\ @version\ 12/11/2025\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main\ method\ to\ run\ the\ jury\ simulator\n\n\ @param\ args\ arguments\ from\ the\ command\ line\n
+numComments=2

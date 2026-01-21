@@ -89,6 +89,7 @@ public class HeapUtil
      * Removes node from heap and makes sure its still a heap
      * Then size-1
      * 
+     * @precondition heap is a max heap
      * @param heap the heap
      * @return new root node
      */
@@ -144,6 +145,9 @@ public class HeapUtil
      * 2. remove first value and put in new array
      * 3. heap size -1
      * 4. repeat
+     * 
+     * @param heap the heap
+     * @return the sorted array
      */
     public Comparable[] heapSort(Comparable[] heap)
     {
@@ -153,13 +157,17 @@ public class HeapUtil
             copy[i] = heap[i];
         }
         
+        buildHeap(copy);
+        
         Comparable[] sorted = new Comparable[heapSize+1];
         int originalSize = heapSize;
         
         // sort in ascending order im assuming? 
-        for (int i = originalSize; i >= 1; i--)
+        for (int i = 1; i <= originalSize; i++)
         {            
             sorted[i] = remove(copy);
+            HeapDisplay display = new HeapDisplay();
+            display.displayHeap(copy, originalSize-i);
         }
         
         heapSize = originalSize;

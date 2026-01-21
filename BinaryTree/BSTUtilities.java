@@ -16,6 +16,8 @@ public abstract class BSTUtilities
      * @param t the tree node currently on
      * @param x the value getting checked
      * @param display the display
+     * 
+     * @return whether it contains or not
      */
     //
     public static boolean contains(TreeNode t, Comparable x, TreeDisplay display)
@@ -54,6 +56,8 @@ public abstract class BSTUtilities
      * @param t the tree node currently on
      * @param x the value getting added
      * @param display the display
+     * 
+     * @return the new head node
      */
     public static TreeNode insert(TreeNode t, Comparable x, TreeDisplay display)
     {
@@ -99,6 +103,8 @@ public abstract class BSTUtilities
      * 
      * @param t the one getting deleted
      * @param display the one getting displayed
+     * 
+     * @return the new treex
      */
     private static TreeNode deleteNode(TreeNode t, TreeDisplay display)
     {
