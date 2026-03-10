@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Token
+comment0.text=\n\ Token\ class\n\n\ @author\ Jonny\ Tang\n\ @version\ 2/17/2026\n
+comment1.params=t\ v
+comment1.target=Token(Scanner.TOKEN_TYPE,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Token\n\ @param\ t\ token\ type\n\ @param\ v\ value\n
+comment2.params=
+comment2.target=Scanner.TOKEN_TYPE\ getType()
+comment2.text=\n\ Getter\ for\ type\n\ @return\ type\n
+comment3.params=
+comment3.target=java.lang.String\ getValue()
+comment3.text=\n\ Getter\ for\ value\n\ @return\ value\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ Overrides\ tostring\ method\n\ @return\ srting\ reprsentation\n
+comment5.params=other
+comment5.target=boolean\ equals(java.lang.Object)
+comment5.text=\n\ Overrides\ equals.\ If\ value\ and\ token\ type\ are\ equal\n\ \n\ @return\ whether\ this\ equals\ other\n
+numComments=6

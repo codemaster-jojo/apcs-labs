@@ -1,0 +1,40 @@
+#BlueJ class context
+comment0.target=Sorter
+comment0.text=\n\ Sorter\ class\ sorts\ stuff.\n\ \n\ @author\ Jonny\ Tang\n\ @version\ 2/27/2026\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ main\ method\ instantiates\ a\ sorter\ instance\n\ Usage\:\ called\ directly\ by\ the\ IDE\ or\ when\ Java\ is\ launched\ \n\ ------------------------------------------\n\ Creates\ a\ Sorter\ object,\ but\ calls\ no\ methods\ from\ Sorter\ \n\ because\ the\ GUI\ SortDisplay\ calls\ sort\ methods\ in\ Sorter\n\ \n\ @params\ args\ an\ array\ of\ arguments\ for\ legacy\ command\ line\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ the\ values\ are\ not\ used\n
+comment10.params=a
+comment10.target=void\ quicksort(java.lang.Comparable[])
+comment10.text=\ \ \ \ \ \n\ Method\:\ quicksort()\n\ Usage\:\ sorter.quicksort(inputArray)\n\ -------------------------------------\n\ quicksort()\ does\ not\ actual\ do\ the\ sorting,\n\ just\ calls\ quicksortHelp\ with\ parameters\ (a,\ 0,\ a.length-1),\n\ which\ does\ the\ actual\ quick\ sorting\n\ \n\ Postcondition\:\ a[lowIndex]\ to\ a[highIndex]\ are\ in\ increasing\ order\n\ @param\ a\ -\ array\ of\ comparable\ elements\ to\ be\ sorted\ with\ quick\ sort\n
+comment11.params=a\ lowIndex\ highIndex
+comment11.target=void\ quicksortHelp(java.lang.Comparable[],\ int,\ int)
+comment11.text=\n\ Method\:\ quicksortHelp()\n\ Usage\:\ quicksortHelp(a,\ low,\ high)\n\ ------------------------------------------\n\ Quick\ soritng\ is\ a\ recursive\ sorting\ algorithm\ that\ sets\ a\ pivot\ point\ (lowIndex\ in\ this\ case)\n\ and\ calls\ partition\ which\ rough\ sort\:\ puts\ every\ element\ less\ than\ pivot\ left\ of\ pivot,\ and\ every\ element\ bigger\ than\ pivot\ right\ of\ pivot\n\ then\ quicksortHelp\ is\ called\ on\ the\ sections\ left\ &\ right\ of\ the\ pivot\ point\n\ \n\ Base\ case\:\ section\ of\ the\ array\ given\ by\ low\ &\ highIndex\ has\ 1\ element\ (high\ <\=\ low),\ \n\ \ \ \ \ \ \ \ \ which\ is\ "sorted"\ by\ definition,\ therefore\ nothing\ is\ done\ to\ it\n\ Recursive\ reduction\:\ the\ element\ at\ lowIndex\ is\ sorted\ as\ the\ pivot\ using\ partition()\ and\ the\ index\ where\ it\ lands\ is\ returned.\n\ \ \ \ \ \ \ \ \ The\ array\ is\ then\ divided\ from\ (low,pivot-1)\ &\ (pivot+1,high)\ because\ index\ pivot\ is\ already\ sorted\ \n\ \ \ \ \ \ \ \ \ and\ quicksortHelp\ is\ used\ again\ on\ sections\ left\ &\ right\ of\ the\ pivot\ element\n\ \n\ Postcondition\:\ a[lowIndex]\ to\ a[highIndex]\ are\ in\ increasing\ order\n\ @param\ a\ -\ array\ of\ comparable\ elements\ to\ be\ sorted\ with\ quick\ sort\n\ @param\ lowIndex\ -\ beginning\ index\ of\ section\ of\ array\ to\ be\ sorted\n\ @param\ highIndex\ -\ ending\ index\ of\ section\ of\ array\ to\ be\ sorted\n
+comment12.params=a\ lowIndex\ highIndex
+comment12.target=int\ partition(java.lang.Comparable[],\ int,\ int)
+comment12.text=\n\ Method\ partition\n\ Usuage\:\ int\ pivotIndex\ \=\ partition(a,\ lowIndex,\ highIndex)\n___________________________________________________________\n\nReturns\ the\ index\ of\ the\ pivot\ element\ defined\ as\ follows\:\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ All\ elements\ on\ the\ left\ side\ of\ the\ pivot\ (from\ lowIndex)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ are\ less\ than\ or\ equal\ to\ the\ pivot.\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ All\ elements\ on\ the\ right\ side\ of\ the\ pivot\ (through\ highIndex)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ are\ greater\ than\ or\ equal\ to\ the\ pivot.\n\ The\ computation\ is\ performed\ in\ place.\n\ @param\ a\ the\ array\ to\ partion\n\ @param\ lowIndex\ is\ the\ index\ of\ the\ start\ of\ the\ part\ of\ array\ a\ to\ consider\n\ @param\ highIndex\ is\ the\ index\ of\ the\ end\ of\ the\ part\ of\ array\ a\ to\ consider\n\ @return\ the\ index\ of\ the\ pivot\ element\ in\ array\ a\n
+comment2.params=
+comment2.target=Sorter()
+comment2.text=\n\ Constructor\:\ Sorter()\n\ Useage\:\ \ Sorter\ aSorter\ \=\ new\ Sorter()\n\ ________________________________________\n\ constructor\ for\ Sorter\ objects.\ \ Creates\ a\ new\ display,\ which\ controls\n\ all\ of\ the\ sorting\ by\ means\ of\ call-backs\ to\ this\ class.\n\ \n
+comment3.params=a\ startIndex
+comment3.target=int\ indexOfMin(java.lang.Comparable[],\ int)
+comment3.text=\n\ Method\:\ indexOfMin()\n\ Usage\:\ finds\ the\ minimum\ of\ an\ array\ starting\ at\ given\ index\n\ @param\ a\ the\ array\n\ @param\ startIndex\ starting\ from\ this\ index\n\ @return\ the\ min\ index\n
+comment4.params=a
+comment4.target=void\ selectionSort(java.lang.Comparable[])
+comment4.text=\n\ Method\:\ selectionSort()\n\ Usage\:\ chooses\ smallest\ element\ and\ move\ to\ the\ \n\ front\ of\ array.\ then\ repeat.\n\ @param\ a\ the\ array\n\ @postcondition\ a\ is\ sorted\n
+comment5.params=a\ nextIndex
+comment5.target=void\ insert(java.lang.Comparable[],\ int)
+comment5.text=\n\ Method\:\ insert()\n\ Usage\:\ Inserts\ one\ value\ at\ nextIndex\ to\ the\ values\ \n\ before\ nextIndex.\ Maintain\ sorted\ order.\n\ @param\ a\ the\ array\n\ @param\ nextIndex\ the\ value\ index\n
+comment6.params=a
+comment6.target=void\ insertionSort(java.lang.Comparable[])
+comment6.text=\n\ Method\:\ insertionSort()\n\ Usage\:\ sorts\ using\ insert()\ method\n\ @param\ a\ the\ array\n
+comment7.params=a
+comment7.target=void\ mergesort(java.lang.Comparable[])
+comment7.text=\n\ Method\:\ mergesort()\n\ Usage\:\ merge\ sort\ using\ "divide\ and\ conquer"\n\ @param\ a\ the\ array\n
+comment8.params=a\ lowIndex\ highIndex
+comment8.target=void\ mergesortHelp(java.lang.Comparable[],\ int,\ int)
+comment8.text=\n\ Method\:\ mergesortHelp()\n\ Usage\:\ the\ helper\ that\ runs\ everything\ taking\ low\ and\ high\ index\n\ @param\ a\ the\ array\n\ @param\ lowIndex\ the\ low\n\ @param\ highIndex\ the\ high\n
+comment9.params=a\ lowIndex\ midIndex\ highIndex
+comment9.target=void\ merge(java.lang.Comparable[],\ int,\ int,\ int)
+comment9.text=\n\ method\ merge()\n\ Useage\:\ merge(inputArray,\ lowIndex,\ midIndex,\ highIndex)\n_______________________________________________\n\ Merges\ the\ two\ halves\ of\ the\ input\ array\ into\ one.\ \ The\ method\ assumes\n\ that\ each\ half\ of\ the\ input\ array\ is\ sorted\ as\ follows\:\n\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a[lowIndex]\ to\ a[midIndex]\ are\ in\ increasing\ order.\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a[midIndex\ +\ 1]\ to\ a[highIndex]\ are\ in\ increasing\ order.\n\ The\ method\ creates\ an\ array\ to\ hold\ the\ output.\ \ It\ then\ establishes\ \n\ two\ pointers\ into\ the\ two\ halves\ of\ the\ input\ array.\ \ The\ values\ at\ the\n\ pointer\ locations\ are\ compared,\ and\ the\ smallest\ is\ added\ to\ the\ output\n\ array.\ \ The\ corresponding\ pointer\ is\ then\ increased\ by\ one.\ \ In\ the\ event\n\ either\ half\ becomes\ empty,\ the\ remaining\ values\ are\ copied\ to\ the\ output\n\ array.\n\ Postcondition\:\ a[lowIndex]\ to\ a[highIndex]\ are\ in\ increasing\ order.\n\n\ @param\ a\ is\ the\ input\ array\ of\ Comparable\ values\n\ @param\ lowIndex\ is\ the\ index\ into\ the\ array\ a\ corresponding\ to\ the\ beginning\n\ \ \ \ \ \ \ \ of\ the\ first\ half\ of\ the\ array\ to\ merge\n\ @param\ midIndex\ is\ the\ index\ of\ the\ last\ value\ in\ the\ first\ half\ of\ the\ array\n\ @param\ highIndex\ is\ the\ index\ of\ the\ last\ value\ in\ the\ second\ half\ of\ the\ array\n
+numComments=13

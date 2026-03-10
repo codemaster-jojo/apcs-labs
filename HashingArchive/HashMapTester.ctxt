@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=HashMapTester
+comment0.text=\n\ @author\ Anu\ Datar\n\ \ \ \ Modifications\ made\ to\ fix\ bugs\ \n\ @author\ joelmanning\n\ Tester\ for\ the\ Hashing\ lab.\ There\ are\ no\ user\ serviceable\ parts\ inside.\n\ Changing\ anything\ will\ void\ your\ warranty.\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=s
+comment2.target=void\ debug(java.lang.String)
+comment3.params=n
+comment3.target=int\ random(int)
+numComments=4

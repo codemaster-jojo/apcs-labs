@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Minesweeper
+comment0.text=\n\ Minesweeper\ encapsulates\ the\ Minesweeper\ game.\n\ \n\ This\ is\ where\ student\ code\ goes\n\ \n\ @author\ Mr.\ Page\n\ @author\ Alexandra\ Michael\ modified\ for\ Checkstyle\n\ @author\ Susan\ King\ modified\ for\ comments\ and\ moves\ Main\ class\ to\ main\ method\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in\ this\ class\n\ @author\ Jonny\ Tang\n\ @version\ May\ 23,\ 2022\n
+comment1.params=
+comment1.target=Minesweeper()
+comment1.text=\n\ Initializes\ the\ default\ Minesweeper\ game.\n
+comment2.params=row\ col\ rightButton
+comment2.target=void\ pressed(int,\ int,\ boolean)
+comment2.text=\n\ Handles\ button\ presses.\ \ This\ method\ is\ called\ whenever\ the\ user\ \n\ selects\ and\ clicks\ on\ a\ location\ within\ the\ mine\ field\ \n\ that\ has\ not\ been\ previously\ selected.\n\ \n\ The\ view\ actionPerformed\ method\ calls\ this\ method\ and\ \n\ passes\ the\ row\ and\ col\ information\ as\ int\ values\n\ \n\ @param\ row\ \ \ the\ row\ the\ cursor\ was\ on\ when\ a\ button\ was\ pressed\n\ @param\ col\ \ \ the\ column\ the\ cursor\ was\ on\ when\ a\ button\ was\ pressed\n\ @param\ rightButton\ \ \ true\ if\ the\ right\ button\ is\ pressed;\ otherwise,\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ false\n
+comment3.params=row\ col
+comment3.target=void\ scanField(int,\ int)
+comment3.text=\n\ Recursively\ scans\ the\ field\ and\ reveals\ all\ squares\ that\ do\ not\ contain\ mines.\n\ Additionally,\ it\ labels\ the\ squares\ adjacent\ to\ mines\ with\ the\ number\ of\ mines\ \n\ adjacent.\n\ \n\ @param\ row\ \ \ the\ row\ of\ the\ cell\ to\ be\ processed\n\ @param\ col\ \ \ the\ column\ of\ the\ cell\ to\ be\ processed\n
+comment4.params=numMines
+comment4.target=void\ setMines(int)
+comment4.text=\n\ Sets\ up\ the\ mine\ field\ in\ a\ random\ pattern.\n\ \n\ @param\ numMines\ \ the\ number\ of\ mines\ that\ the\ user\ wants\ set\ up.\n
+comment5.params=row\ col
+comment5.target=int\ countMines(int,\ int)
+comment5.text=\n\ Counts\ the\ number\ of\ mines\ adjacent\ to\ a\ given\ location.\n\ \n\ @param\ row\ \ \ the\ row\ of\ the\ cell\ in\ which\ adjacent\ mines\ are\ being\ counted\n\ @param\ col\ \ \ the\ column\ of\ the\ cell\ in\ which\ adjacent\ mines\ are\ being\ counted\n\ @return\ the\ number\ of\ mines\ adjacent\ to\ the\ given\ location\n
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\n\ Starts\ the\ game\ Minesweeper.\n\ \n\ @param\ args\ \ information\ from\ the\ command\ line\n
+numComments=7

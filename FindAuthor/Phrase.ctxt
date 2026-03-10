@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Phrase
+comment0.text=\n\ Phrase\ class.\n\n\ @author\ Jonny\ Tang\n\ @version\ 2/18/2026\n
+comment1.params=t
+comment1.target=Phrase(java.util.ArrayList)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Phrase\n\ @param\ t\ the\ tokens\n
+comment2.params=t
+comment2.target=void\ addToken(Token)
+comment2.text=\n\ Adds\ token\ to\ the\ array\ list\n\ O(1)\ time\ complexity\n\ @param\ t\ the\ token\n
+comment3.params=
+comment3.target=java.util.ArrayList\ getTokens()
+comment3.text=\n\ Creates\ a\ deep\ copy\ of\ the\ array\ list\ of\ tokens\n\ @return\ the\ tokens\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ To\ string\ method\ changes\ the\ phrase\ into\ a\ string.\n
+numComments=5

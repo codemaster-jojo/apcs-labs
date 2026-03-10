@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Rectangle
+comment0.text=\n\ Rectangle\ class\ that\ literally\ just\ stores\ a\ rectangle\n\ \n\ @author\ Jonny\ Tang\n\ @version\ 1/21/2026\n
+comment1.params=len\ w
+comment1.target=Rectangle(int,\ int)
+comment1.text=\n\ Constructor\ for\ rectangle.\ \n\ \n\ @param\ len\ the\ length\n\ @param\ w\ the\ width\n
+comment2.params=
+comment2.target=int\ getLength()
+comment2.text=\n\ Getter\ for\ length\n\ @return\ length\n
+comment3.params=
+comment3.target=int\ getWidth()
+comment3.text=\n\ Getter\ for\ width\n\ @return\ width\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ To\ string\ method.\ Prints\ in\ this\ format\:\n\ [LENGTH]x[WIDTH]\n\ @return\ the\ string\ in\ the\ format\ above\n
+comment5.params=
+comment5.target=int\ hashCode()
+comment5.text=\n\ Hash\ code\ method.\ Modulus\ happens\ in\ hash\ set\ class.\n\ \n\ @return\ the\ object\ hashed.\n
+comment6.params=obj
+comment6.target=boolean\ equals(java.lang.Object)
+comment6.text=\n\ Checks\ if\ this\ rectangle\ equals\ the\ other\ (by\ checking\ if\ the\ length\ and\n\ width\ are\ the\ same)\n\ @param\ obj\ the\ object\ getting\ compared\ to\n\ @return\ whether\ the\ object\ is\ equal\ or\ not\n
+numComments=7
