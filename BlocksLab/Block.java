@@ -21,6 +21,16 @@ public class Block
     }
     
     /**
+     * Constructs a block of whatever color
+     */
+    public Block(Color c)
+    {
+        color = c;
+        grid = null;
+        location = null;
+    }
+    
+    /**
     * Getter for color
     * @return color
     */
@@ -106,7 +116,7 @@ public class Block
     /**
     * returns a string with the location and color of this block
     * @return the string format of the block
-    * format: COLOR block at (ROW, CO<)
+    * format: COLOR block at (ROW, COL)
     */
     public String toString()
     {

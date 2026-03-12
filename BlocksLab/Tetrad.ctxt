@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Tetrad
+comment0.text=\n\ Tetrad\ class\n\ 7\ types\:\ I\ T\ O\ L\ J\ S\ Z\n\n\ @author\ Jonny\ Tang\n\ @version\ 3/10/2026\n
+comment1.params=g
+comment1.target=Tetrad(MyBoundedGrid)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Tetrad\n\ @param\ g\ the\ grid\n
+comment2.params=grid\ locs
+comment2.target=void\ addToLocations(MyBoundedGrid,\ Location[])
+comment2.text=\n\ Adds\ blocks\ to\ assigned\ locations\n\ @precondition\ \ blocks\ are\ not\ in\ any\ grid;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ locs.length\ \=\ 4.\n\ @postcondition\ The\ locations\ of\ blocks\ match\ locs,\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ and\ blocks\ have\ been\ put\ in\ the\ grid.\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ @param\ grid\ the\ grid\n\ @param\ locs\ array\ of\ 4\ locations\n
+comment3.params=
+comment3.target=Location[]\ removeBlocks()
+comment3.text=\n\ Removes\ block\ from\ grid\n\ \n\ @precondition\ \ Blocks\ are\ in\ the\ grid.\n\ @postcondition\ Returns\ old\ locations\ of\ blocks;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blocks\ have\ been\ removed\ from\ grid.\n\ \n\ @return\ locations\ of\ the\ 4\ old\ blocks\n
+comment4.params=grid\ locs
+comment4.target=boolean\ areEmpty(MyBoundedGrid,\ Location[])
+comment4.text=\n\ Checks\ if\ 4\ locations\ are\ all\ empty\n\ @postcondition\ return\ true\ if\ each\ of\ the\ locs\n\ \ \ \ \ \ is\ empty.\ false\ otherwise.\n\ @return\ whether\ the\ given\ locations\ are\ empty\n
+comment5.params=deltaRow\ deltaCol
+comment5.target=boolean\ translate(int,\ int)
+comment5.text=\n\ @postcondition\ Attempts\ to\ move\ this\ tetrad\ deltaRow\ rows\ down.\n\ \n\ @return\ \ true\ if\ succeeds\ in\ translating.\ False\ if\ not.\n
+comment6.params=
+comment6.target=boolean\ rotate()
+comment6.text=\n\ Attempts\ to\ rotate\ clockwise\ 90\ degrees\ about\ center.\n\ Uses\ blocks[0]\ as\ the\ centerpiece\ to\ rotate\ around\n\ \n\ @reutrn\ true\ if\ rotate\ succeeds,\ false\ if\ it\ doesnt\n
+numComments=7
