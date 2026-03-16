@@ -16,6 +16,7 @@ public class Tetrad
     Color color;
     MyBoundedGrid<Block> grid;
     Location[] locs;
+    boolean isSquare;
     
     private Semaphore lock;
     
@@ -25,6 +26,7 @@ public class Tetrad
      */
     public Tetrad(MyBoundedGrid<Block> g)
     {
+        isSquare = false;
         lock = new Semaphore(1,true);
         
         grid = g;
@@ -52,6 +54,7 @@ public class Tetrad
         if (rand == 2) // O
         {
             // p0 doesnt matter here
+            isSquare = true;
             locs[0] = new Location(0,4);
             locs[1] = new Location(1,4);
             locs[2] = new Location(1,5);
@@ -219,6 +222,11 @@ public class Tetrad
      */
     public boolean rotate()
     {
+        if (isSquare)
+        {
+            return true;
+        }
+        
         try
         {
             lock.acquire();

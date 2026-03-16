@@ -13,7 +13,7 @@ import javax.swing.*;
  * Removed the JPanel
  */
 // Used to display the contents of a game board
-public class BlockDisplay extends JComponent implements KeyListener
+public class BlockDisplay extends JComponent implements KeyListener 
 {
     private static final Color BACKGROUND = Color.BLACK;
     private static final Color BORDER = Color.BLACK;
@@ -24,6 +24,8 @@ public class BlockDisplay extends JComponent implements KeyListener
     private MyBoundedGrid<Block> board;
     private JFrame frame;
     private ArrowListener listener;
+    private Tetris tetris;
+    private KeyListener key;
 
     // Constructs a new display for displaying the given board
     public BlockDisplay(MyBoundedGrid<Block> board)
@@ -133,10 +135,19 @@ public class BlockDisplay extends JComponent implements KeyListener
             listener.downPressed();
         else if (code == KeyEvent.VK_UP)
             listener.upPressed();
+        else if (code == KeyEvent.VK_SPACE)
+        {
+            tetris.fastDown();
+        }
     }
 
     public void setArrowListener(ArrowListener listener)
     {
         this.listener = listener;
+    }
+    
+    public void setTetris(Tetris t)
+    {
+        tetris = t;
     }
 }

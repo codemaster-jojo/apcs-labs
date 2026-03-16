@@ -21,14 +21,14 @@ public class Tetris implements ArrowListener
     static int level;
     static int clearedRows;
     
-    public static final int LEVEL_THRESHOLD = 2;
+    public static final int LEVEL_THRESHOLD = 5;
     
     /**
      * Constructor for my tetris
      */
     public Tetris()
     {
-        sleepTime = 400;
+        sleepTime = 250;
         score = 0;
         level = 1;
         clearedRows = 0;
@@ -36,6 +36,7 @@ public class Tetris implements ArrowListener
         grid = new MyBoundedGrid(20, 10);
         display = new BlockDisplay(grid);
         display.setArrowListener(this);
+        display.setTetris(this);
         
         display.setTitle("Tetris");
         
@@ -83,7 +84,7 @@ public class Tetris implements ArrowListener
                     if (clearedRows >= LEVEL_THRESHOLD) // advance level
                     {
                         level++;
-                        sleepTime -= 50;
+                        sleepTime -= 25;
                         clearedRows -= LEVEL_THRESHOLD;
                     }
                 }
@@ -127,7 +128,7 @@ public class Tetris implements ArrowListener
             grid.remove(new Location(row, i));
         }
         
-        // move everything down
+        // move stuf down
         for (int r=row-1; r>=0; r--)
         {
             for (int c=0; c<grid.getNumCols(); c++)
@@ -198,5 +199,36 @@ public class Tetris implements ArrowListener
     {
         activeTetrad.translate(0,1);
         display.showBlocks();
+    }
+    
+    /**
+     * Drop down all the way
+     */
+    public void fastDown()
+    {
+        
+        // drop down all the way
+        while (activeTetrad.translate(1,0))
+        {
+            String j = "hi! my name is jonny and im so cool";
+        }
+        
+        score += 5;
+                
+        activeTetrad = null;
+        
+        int cleared = clearCompletedRows();
+        clearedRows += cleared;
+        
+        score += 100 * cleared * cleared * level;
+        
+        activeTetrad = new Tetrad(grid);
+        
+        if (clearedRows >= LEVEL_THRESHOLD) // advance level
+        {
+            level++;
+            sleepTime -= 50;
+            clearedRows -= LEVEL_THRESHOLD;
+        }
     }
 }
