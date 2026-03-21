@@ -19,9 +19,11 @@ public class Minefield
     // visited is an arrray of booleans indicating whether a location has been visited
     private boolean[][] theField;
     private boolean[][] visited;
+    private boolean[][] flagged;
     
     // mineCount keeps track of how many mines are currently in the game
     private int mineCount;
+    private int numFlags;
     
     // constructors
     /**
@@ -34,6 +36,7 @@ public class Minefield
     {
         theField = new boolean[rows][cols];
         visited = new boolean[rows][cols];
+        flagged = new boolean[rows][cols];
     }
 
     /**
@@ -41,7 +44,7 @@ public class Minefield
      */
     public Minefield()
     {
-        this(9,9);
+        this(9, 9);
     }
 
     /**
@@ -92,7 +95,7 @@ public class Minefield
      */
     public boolean isMine(int row, int col)
     {
-        return isValid(row,col) && theField[row][col];
+        return isValid(row, col) && theField[row][col];
     }
 
     /**
@@ -103,7 +106,7 @@ public class Minefield
      */
     public void add(int row, int col)
     {
-        if(!isMine(row,col))
+        if(!isMine(row, col))
         {
             theField[row][col] = true;
             mineCount++;
@@ -119,10 +122,13 @@ public class Minefield
      * @param row   the row of the location to be marked
      * @param col   the column of the location to be marked
      */
-    public void markVisited(int row,int col)
+    public void markVisited(int row, int col)
     {
         // mark a location as visited, if it is not a mine
-        if(isValid(row,col) && !theField[row][col]) visited[row][col] = true;        
+        if(isValid(row, col) && !theField[row][col]) 
+        {
+            visited[row][col] = true;       
+        } 
     }
 
     /**
@@ -135,7 +141,7 @@ public class Minefield
      */
     public boolean isVisited(int row, int col)
     {
-        return isValid(row,col) && visited[row][col];
+        return isValid(row, col) && visited[row][col];
     }
 
     /**
@@ -146,5 +152,35 @@ public class Minefield
     public int numMines()
     {
         return mineCount;    
+    }
+
+    /**
+     * Flags or unflags
+     * @param row the row
+     * @param col the col
+     * @return the new flag state
+     */    
+    public boolean invertFlag(int row, int col)
+    {
+        flagged[row][col] = !flagged[row][col];
+        return flagged[row][col];
+    }
+    
+    /**
+     * Getter for flags
+     * @return number of flags
+     */
+    public int getNumFlags()
+    {
+        return numFlags;
+    }
+    
+    /**
+     * Setter for flags
+     * @param set number of flags
+     */
+    public void setNumFlags(int set)
+    {
+        numFlags = numFlags + set;
     }
 }

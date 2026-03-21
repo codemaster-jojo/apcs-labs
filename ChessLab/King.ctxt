@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=King
+comment0.text=\n\ King\ piece\ extends\ piece\n\n\ @author\ Jonny\ Tang\n\ @version\ 3/20/2026\n
+comment1.params=col\ fileName
+comment1.target=King(java.awt.Color,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ King\n
+comment2.params=
+comment2.target=java.util.ArrayList\ destinations()
+comment2.text=\n\ Destinations\ for\ king\n\ 8\ adjacent\ pieces\n\ If\ valid\ adds\ to\ arraylist\n
+numComments=3

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=BoardDisplay
+comment1.params=board
+comment1.target=BoardDisplay(Board)
+comment2.params=
+comment2.target=void\ run()
+comment3.params=
+comment3.target=void\ createAndShowGUI()
+comment3.text=\n\ Create\ the\ GUI\ and\ show\ it.\ \ For\ thread\ safety,\n\ this\ method\ should\ be\ invoked\ from\ the\n\ event-dispatching\ thread.\n
+comment4.params=event
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=
+comment5.target=void\ showBoard()
+comment6.params=
+comment6.target=Move\ selectMove()
+comment7.params=title
+comment7.target=void\ setTitle(java.lang.String)
+comment8.params=loc\ color
+comment8.target=void\ setColor(Location,\ java.awt.Color)
+comment9.params=
+comment9.target=void\ clearColors()
+numComments=10

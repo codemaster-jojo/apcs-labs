@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Board
+comment0.text=\n\ Represesents\ a\ rectangular\ game\ board,\ containing\ Piece\ objects.\n\ @author\ Jonny\ Tang,\ writers\ of\ lab\n\ @version\ 3/20/2026\n
+comment1.params=
+comment1.target=Board()
+comment1.text=\n\ Constructor\n\ calls\ constructor\ with\ 8x8\ grid\n
+comment2.params=move
+comment2.target=void\ undoMove(Move)
+comment2.text=\ \n\ Precondition\:\ \ move\ has\ already\ been\ made\ on\ the\ board\n\ Postcondition\:\ piece\ has\ moved\ back\ to\ its\ source,\n\ and\ any\ captured\ piece\ is\ returned\ to\ its\ location\n\ @param\ move\ the\ move\ undone\n
+numComments=3

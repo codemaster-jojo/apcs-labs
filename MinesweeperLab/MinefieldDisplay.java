@@ -225,11 +225,11 @@ public class MinefieldDisplay implements MouseListener
      */
     public void setText(int row, int col, String text)
     {
-        if(!theField.isMine(row,col))
-        {
-            grid[row][col].setText(text);            
-        }
-
+        //if(!theField.isMine(row,col))
+        //{
+        grid[row][col].setText(text);            
+        grid[row][col].setText(text);
+        //}
     } 
 
     /**
@@ -256,6 +256,15 @@ public class MinefieldDisplay implements MouseListener
     public void setFace(String faceName)
     {
         face.setIcon(new ImageIcon(faceName));
+    }
+    
+    /**
+     * Sets mine count
+     * @param count the count
+     */
+    public void setMineCount(int count)
+    {
+        numMines.setText("" + count);
     }
 
     /**

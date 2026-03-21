@@ -1,60 +1,80 @@
 import java.awt.*;
 import java.util.*;
 
-public class Piece
+public abstract class Piece
 {
-	//the board this piece is on
-	private Board board;
+    //the board this piece is on
+    private Board board;
 
-	//the location of this piece on the board
-	private Location location;
+    //the location of this piece on the board
+    private Location location;
 
-	//the color of the piece
-	private Color color;
+    //the color of the piece
+    private Color color;
 
-	//the file used to display this piece
-	private String imageFileName;
+    //the file used to display this piece
+    private String imageFileName;
 
-	//the approximate value of this piece in a game of chess
-	private int value;
+    //the approximate value of this piece in a game of chess
+    private int value;
 
-	//constructs a new Piece with the given attributes.
-	public Piece(Color col, String fileName, int val)
-	{
-		color = col;
-		imageFileName = fileName;
-		value = val;
-	}
+    /**
+     * Constructor
+     * @param col the color
+     * @param fileName the file name
+     * @param val the value of the piece
+     */
+    public Piece(Color col, String fileName, int val)
+    {
+        color = col;
+        imageFileName = fileName;
+        value = val;
+    }
 
-	//returns the board this piece is on
-	public Board getBoard()
-	{
-		return board;
-	}
+    /**
+     * Returns board
+     * @return board
+     */
+    public Board getBoard()
+    {
+        return board;
+    }
 
-	//returns the location of this piece on the board
-	public Location getLocation()
-	{
-		return location;
-	}
+    /**
+     * Returns location
+     * @return location
+     */
+    public Location getLocation()
+    {
+        return location;
+    }
 
-	//returns the color of this piece
-	public Color getColor()
-	{
-		return color;
-	}
+    /**
+     * Returns color
+     * @return color
+     */
+    public Color getColor()
+    {
+        return color;
+    }
 
-	//returns the name of the file used to display this piece
-	public String getImageFileName()
-	{
-		return imageFileName;
-	}
+    /**
+     * Returns the image file name
+     * @return image file name
+     */
+    public String getImageFileName()
+    {
+        return imageFileName;
+    }
 
-	//returns a number representing the relative value of this piece
-	public int getValue()
-	{
-		return value;
-	}
+    /**
+     * Gets value of piece
+     * @return value
+     */
+    public int getValue()
+    {
+        return value;
+    }
 
     /**
      * Puts this piece into a board. If there is another piece at the given
@@ -125,4 +145,18 @@ public class Piece
         location = newLocation;
         board.put(location, this);
     }
+    
+    /**
+     * Checks whether its valid
+     * 
+     * @param dest the destination
+     * @return whether its valid
+     */
+    public boolean isValidDestination(Location dest)
+    {
+        return board.isValid(dest) && (board.get(dest) == null 
+            || !board.get(dest).getColor().equals(color));
+    }
+    
+    public abstract ArrayList<Location> destinations();
 }

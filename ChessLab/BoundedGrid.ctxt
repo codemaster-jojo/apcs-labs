@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=BoundedGrid
+comment0.text=\n\ A\ <code>BoundedGrid</code>\ is\ a\ rectangular\ grid\ with\ a\ finite\ number\ of\n\ rows\ and\ columns.\ <br\ />\n\ The\ implementation\ of\ this\ class\ is\ testable\ on\ the\ AP\ CS\ AB\ exam.\n
+comment1.params=rows\ cols
+comment1.target=BoundedGrid(int,\ int)
+comment1.text=\n\ Constructs\ an\ empty\ bounded\ grid\ with\ the\ given\ dimensions.\n\ (Precondition\:\ <code>rows\ >\ 0</code>\ and\ <code>cols\ >\ 0</code>.)\n\ @param\ rows\ number\ of\ rows\ in\ BoundedGrid\n\ @param\ cols\ number\ of\ columns\ in\ BoundedGrid\n
+comment2.params=
+comment2.target=int\ getNumRows()
+comment3.params=
+comment3.target=int\ getNumCols()
+comment4.params=loc
+comment4.target=boolean\ isValid(Location)
+comment5.params=
+comment5.target=java.util.ArrayList\ getOccupiedLocations()
+comment6.params=loc
+comment6.target=java.lang.Object\ get(Location)
+comment7.params=loc\ obj
+comment7.target=java.lang.Object\ put(Location,\ java.lang.Object)
+comment8.params=loc
+comment8.target=java.lang.Object\ remove(Location)
+numComments=9

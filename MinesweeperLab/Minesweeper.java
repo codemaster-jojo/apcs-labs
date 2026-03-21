@@ -54,14 +54,22 @@ public class Minesweeper
      */
     public void pressed(int row, int col, boolean rightButton)
     {
-        if (!theField.isValid(row,col))
+        // timer
+        if (!rightButton && !timerStarted)
+        {
+            theDisplay.startTimer();
+            timerStarted = true;
+        }
+        
+        if (!theField.isValid(row, col))
         {
             return;
         }
+        
         if (!rightButton)
         {
             // if mine -> lose
-            if (theField.isMine(row,col))
+            if (theField.isMine(row, col))
             {
                 // lose
                 theDisplay.showAll();
@@ -77,7 +85,21 @@ public class Minesweeper
         }
         else
         {
-            theDisplay.setText(row, col, "M");
+            boolean tile = theField.invertFlag(row, col);
+            if (tile)
+            {
+                // just flagged
+                theField.setNumFlags(1);
+                theDisplay.setMineCount(10-theField.getNumFlags());
+                theDisplay.setText(row, col, "F");
+            }
+            else
+            {
+                // unflag
+                theField.setNumFlags(-1);
+                theDisplay.setMineCount(10-theField.getNumFlags());
+                theDisplay.setText(row, col, "");
+            }
         }
     }
 
@@ -148,7 +170,7 @@ public class Minesweeper
             int row = (int) (Math.random() * GRID_ROWS);
             int col = (int) (Math.random() * GRID_COLS);
             
-            if (!theField.isMine(row,col))
+            if (!theField.isMine(row, col))
             {
                 theField.add(row, col);
                 numMines--;
