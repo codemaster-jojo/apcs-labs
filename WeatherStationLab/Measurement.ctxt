@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Measurement
+comment0.text=\n\ Measurement\ class\n\n\ @author\ \ Jonny\ Tang\n\ @version\ 4/20/2026\n
+comment1.params=e\ t
+comment1.target=Measurement(int,\ double)
+comment1.text=\n\ Sets\ the\ elapsed\ and\ temp\ instance\ variables\ using\ the\ given\ parameters.\n\ @param\ e\ \ the\ time\ elapsed\n\ @param\ t\ \ the\ temperature\n
+comment2.params=
+comment2.target=int\ getElapsed()
+comment2.text=\ \n\ Retrieves\ the\ elapsed\ time\ in\ milliseconds\ since\ measurements\ began.\ \n\ @return\ elapsed\n
+comment3.params=
+comment3.target=double\ getTemp()
+comment3.text=\ \n\ Returns\ the\ temperature\ recorded.\ \n\ @return\ the\ temperature\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\ \n\ Returns\ the\ elapsed\ time\ and\ temperature\ \n\ associated\ with\ the\ Measurement\ object.\ \n\ @return\ the\ measurement\ in\ string\ form\n
+numComments=5

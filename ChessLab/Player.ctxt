@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\n\ Abstrat\ player\ class.\ Defines\ a\ player\ (color,\ board,\ name)\n\n\ @author\ Jonny\ Tang\n\ @version\ 4/5/2026\n
+comment1.params=b\ c\ n
+comment1.target=Player(Board,\ java.awt.Color,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Player\n\ @param\ b\ the\ board\n\ @param\ c\ the\ color\n\ @param\ n\ the\ player's\ name\n
+comment2.params=
+comment2.target=Board\ getBoard()
+comment2.text=\n\ Getter\ for\ board\n\ @return\ board\n
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment3.text=\n\ Getter\ for\ name\n\ @return\ name\n
+comment4.params=
+comment4.target=java.awt.Color\ getColor()
+comment4.text=\n\ Getter\ for\ color\n\ @return\ color\n
+comment5.params=
+comment5.target=Move\ nextMove()
+comment5.text=\n\ determines\ next\ move\n\ abstract\ method,\ requires\ implementation\n\ @return\ next\ move\n
+numComments=6

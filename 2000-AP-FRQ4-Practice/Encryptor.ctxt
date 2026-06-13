@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Encryptor
+comment1.params=
+comment1.target=Encryptor()
+comment2.params=target
+comment2.target=Point\ getCoordinates(java.lang.String)
+comment3.params=pair
+comment3.target=java.lang.String\ encryptTwo(java.lang.String)
+comment4.params=x
+comment4.target=java.lang.String\ encryptWord(java.lang.String)
+numComments=5

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=RandomPlayer
+comment0.text=\n\ Subclass\ of\ Player\n\ Implements\ nextMove\n\ \n\ @author\ Jonny\ Tang\n\ @version\ 4/6/2026\n
+comment1.params=b\ c\ n
+comment1.target=RandomPlayer(Board,\ java.awt.Color,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ RandomPlayer\n\ @param\ b\ the\ board\n\ @param\ c\ the\ color\n\ @param\ n\ the\ player's\ name\n
+comment2.params=
+comment2.target=Move\ nextMove()
+comment2.text=\n\ Gets\ a\ random\ move\n
+numComments=3

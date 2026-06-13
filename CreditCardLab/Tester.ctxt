@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Tester
+comment0.text=\n\ Tester\ class.\ Literally\ what\ it\ sounds\ like.\n\ Tests\ out\ CardNumber.\n\ \n\ @author\ \ Jonny\ Tang\n\n\ @version\ \ 4/16/2026\n
+comment1.params=arr
+comment1.target=java.lang.String\ arrStr(int[])
+comment1.text=\n\ Gets\ the\ array\ in\ string\ format\n\ @param\ arr\ the\ array\n\ @return\ the\ string\ format\ of\ the\ array\n
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment2.text=\n\ Main\ method\ to\ test\ out\ the\ CardNumber\ class\n\n\ @param\ args\ arguments\ from\ the\ command\ line\n
+numComments=3

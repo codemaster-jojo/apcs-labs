@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Pawn
+comment0.text=\n\ Pawn\ piece\ extends\ piece\n\n\ @author\ Jonny\ Tang\n\ @version\ 4/14/2026\n
+comment1.params=col\ fileName
+comment1.target=Pawn(java.awt.Color,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Pawn\n\ @param\ col\ the\ color\n\ @param\ fileName\ the\ sprite\ file\n
+comment2.params=
+comment2.target=java.util.ArrayList\ destinations()
+comment2.text=\n\ Destinations\ for\ Pawn\n\ 8\ directions\ \n\ If\ valid\ adds\ to\ arraylist\n\ @return\ array\ list\ of\ valid\ locs\n
+numComments=3

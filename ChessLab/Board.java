@@ -36,4 +36,46 @@ public class Board extends BoundedGrid<Piece>
         if (victim != null)
             victim.putSelfInGrid(piece.getBoard(), dest);
     }
+    
+    /**
+     * Gets all moves for a given color's pieces
+     * @param color the colors
+     * @return array list of all moves possible
+     */
+    public ArrayList<Move> allMoves(Color color)
+    {
+        // dupe locations
+        ArrayList<Move> moves = new ArrayList<Move>();
+        
+        for (int i=0; i<8; i++)
+        {
+            for (int j=0; j<8; j++)
+            {
+                Piece p = get(new Location(i, j));
+                
+                if (p != null && p.getColor().equals(color))
+                {
+                    ArrayList<Location> validMoves = p.destinations();
+                    for (Location l : validMoves)
+                    {
+                        moves.add(new Move(p, l));
+                    }
+                }
+            }
+        }
+        
+        return moves;
+    }
+    
+    /**
+     * Executes the move
+     * @param move the move that's getting executed
+     */
+    public void executeMove(Move move)
+    {
+        Piece p = move.getPiece();
+        remove(move.getDestination());
+        
+        p.moveTo(move.getDestination());
+    }
 }

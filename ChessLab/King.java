@@ -11,6 +11,8 @@ public class King extends Piece
 {
     /**
      * Constructor for objects of class King
+     * @param col the color
+     * @param fileName the sprite file
      */
     public King(Color col, String fileName)
     {
@@ -21,6 +23,7 @@ public class King extends Piece
      * Destinations for king
      * 8 adjacent pieces
      * If valid adds to arraylist
+     * @return location array list with all valid destinations
      */
     public ArrayList<Location> destinations()
     {
@@ -35,7 +38,8 @@ public class King extends Piece
                 if (dr == 0 && dc == 0)
                 {
                 }
-                else if (isValidDestination(new Location(r+dr, c+dc)))
+                else if (isValidDestination(new Location(r+dr, c+dc)) 
+                    && getBoard().get(new Location(r+dr, c+dc)) == null)
                 {
                     locs.add(new Location(r+dr, c+dc));
                 }

@@ -158,5 +158,87 @@ public abstract class Piece
             || !board.get(dest).getColor().equals(color));
     }
     
+    /**
+     * Abstract class getting all valid destinations
+     * @return location array list with all valid destinations
+     */
     public abstract ArrayList<Location> destinations();
+    
+    /**
+     * Gets all locations [direction, ex. north] from the piece
+     * @param dests 
+     */
+    public void sweep(ArrayList<Location> dests, int direction)
+    {
+        int addR = 0;
+        int addC = 0;
+        if (direction == 0) // north
+        {
+            addR = -1;
+            addC = 0;
+        }
+        else if (direction == 45) // NE
+        {
+            addR = -1;
+            addC = 1;
+        }
+        else if (direction == 90) // east
+        {
+            addR = 0;
+            addC = 1;
+        }
+        else if (direction == 135) // SE
+        {
+            addR = 1;
+            addC = 1;
+        }
+        else if (direction == 180) // south
+        {
+            addR = 1;
+            addC = 0;
+        }
+        else if (direction == 225) // SW
+        {
+            addR = 1;
+            addC = -1;
+        }
+        else if (direction == 315) // NW
+        {
+            addR = -1;
+            addC = -1;
+        }
+        else // west
+        {
+            addR = 0;
+            addC = -1;
+        }
+
+        int r = location.getRow() + addR;
+        int c = location.getCol() + addC;
+        boolean isRunning = true;
+        while (isRunning)
+        {
+            if (!board.isValid(new Location(r, c)))
+            {
+                isRunning = false;
+                return;
+            }
+            else if (board.get(new Location(r, c)) == null) // empty
+            {
+                dests.add(new Location(r, c));
+                r += addR;
+                c += addC;
+            }
+            else
+            {
+                isRunning = false;
+            }
+        }
+        
+        if (board.get(new Location(r, c)).getColor() != getColor())
+        {
+            // opposite colors
+            dests.add(new Location(r, c));
+        }
+    }
 }

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=CardNumber
+comment0.text=\n\ Card\ number\ class.\ For\ credit\ card.\n\ Has\ an\ algorithm\ to\ check\ if\ credit\ card\ number\ is\ valid\n\ \n\ @author\ Jonny\ Tang\n\ @version\ 4/16/2026\n
+comment1.params=nums
+comment1.target=CardNumber(int[])
+comment1.text=\n\ Constructor\ that\ creates\ a\ card\ number\ object\n\ @param\ nums\ \ the\ digits\ of\ the\ credit\ card\ numbers\ being\ created\n
+comment2.params=
+comment2.target=int[]\ cardNum()
+comment2.text=\n\ Getter\ for\ card\ num\ array\n\ @return\ the\ card\ num\n
+comment3.params=
+comment3.target=int[]\ doublePattern()
+comment3.text=\n\ Returns\ an\ array\ with\ the\ digits\ doubled\ or\ the\ same\ depending\n\ on\ the\ index\ of\ the\ digit\ according\ to\ the\ set\ of\ rules\ above.\n\ @precondition\ cardNum\ is\ not\ empty\ and\ each\ element\ contains\n\n\ \ \ \ a\ single\ positive\ digit\n\ @return\ an\ array\ of\ n\ elements,\ where\ n\ is\ cardNum.length.\n\ The\ elements\ at\ indexes\ n-2,\ n-4,\ n-6,\ ...\ are\ doubled\ and\ the\n\ elements\ at\ n-1,\ n-3,\ n-5,\ ...\ are\ the\ same\ as\ corresponding\n\ elements\ in\ cardNum.\ cardNum\ itself\ is\ unchanged.\n\ Some\ elements\ of\ the\ returned\ array\ may\ have\ two\ digits\n
+comment4.params=
+comment4.target=boolean\ verified()
+comment4.text=\n\ Validates\ the\ digits\ in\ a\ credit\ card.\n\ @return\ true\ if\ credit\ card\ number\ is\ valid,\ false\ otherwise\n\n
+comment5.params=
+comment5.target=void\ fillInMissingNumber()
+comment5.text=\n\ Fills\ in\ the\ missing\ number\ that's\ -1\n\ @precondition\ one\ and\ only\ one\ number\ is\ missing\n
+numComments=6

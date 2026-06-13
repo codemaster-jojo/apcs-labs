@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=HumanPlayer
+comment0.text=\n\ Human\ player\n\n\ @author\ Jonny\ Tang\n\ @version\ 4/14/2026\n
+comment1.params=b\ c\ n\ d
+comment1.target=HumanPlayer(Board,\ java.awt.Color,\ java.lang.String,\ BoardDisplay)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ HumanPlayer\n\ @param\ b\ the\ board\n\ @param\ c\ the\ color\n\ @param\ n\ the\ player's\ name\n
+comment2.params=
+comment2.target=Move\ nextMove()
+numComments=3

@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=WeatherStation
+comment0.text=\n\ WeatherStation\ class\n\n\ @author\ \ \ Jonny\ Tang\n\ @version\ \ 4/20/2026\n
+comment1.params=inputs\ interval
+comment1.target=WeatherStation(Measurement[],\ int)
+comment1.text=\n\ Constructs\ object\ of\ the\ Weather\ class.\n\n\ @param\ inputs\ \ \ \ array\ of\ consecutive\ temperature\ measurements\ objects\ in\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ increasing\ order\ of\ elapsed\ time\n\ @param\ interval\ \ the\ fixed\ time\ interval\ length\ for\ calculating\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ average\ of\ polled\ temperature\ measurements\n
+comment2.params=inputs\ intervalLength
+comment2.target=java.util.List\ createIntervalAverageTemps(Measurement[],\ int)
+comment2.text=\n\ Calculates\ average\ measures\ for\ the\ given\ intervals.\n\ \n\ @param\ inputs\ \ array\ of\ consecutive\ input\ measurements\n\ in\ increasing\ order\ of\ elapsed\ time\n\ @param\ intervalLength\ \ the\ interval\ length\n\ \n\ @return\ list\ of\ the\ averages\ of\ all\ samples\ in\ inputs\ within\ the\ given\ interva\n
+comment3.params=
+comment3.target=java.util.List\ getIntervalAverageTemps()
+comment3.text=\n\ Retrieve\ the\ list\ of\ interval\ average\ temperatures.\n\n\ @return\ the\ interval\ average\ temperature\ data\n
+comment4.params=
+comment4.target=java.util.List\ sortOnTemperatures()
+comment4.text=\n\ Returns\ a\ list\ containing\ the\ Measurement\ objects\ in\ intervalAverageTemps\n\ sorted\ in\ ascending\ order\ of\ temperatures.\n\n\ @postcondition\ intervalAverageTemps\ is\ not\ altered\n\n\ @return\ a\ list\ of\ measurements\ sorted\ by\ temperatures\n
+comment5.params=list
+comment5.target=double\ findMedian(java.util.List)
+comment5.text=\n\ Return\ the\ median\ temperature\ of\ a\ list\ of\ measurements.\n\ If\ the\ list\ is\ an\ odd\ length,\ the\ median\ value\ is\ in\ the\ middle.\n\ Otherwise,\ the\ median\ is\ a\ mean\ (average)\ of\ the\ two\ temperatures\ in\ the\ middle.\n\n\ @precondition\ the\ data\ is\ arranged\ in\ order\ of\ temperature\ from\ least\ to\ greatest\n\ @param\ list\ a\ collection\ of\ measurements\n\n\ @return\ the\ median\ temperature\n
+comment6.params=
+comment6.target=double[]\ findFenceBounds()
+comment6.text=\n\ Calculates\ the\ fences\ of\ the\ measurements\ in\ intervalAverageTemps\ based\ upon\ temperature.\n\n\ @precondition\ Objects\ in\ intervalAverageTemps\ are\ non-null\ and\ will\ always\n\ contain\ measurements\ in\ increasing\ order\ by\ elapsed\ time.\n\ @postcondition\ the\ measurements\ in\ intervalAverageTemp\ remain\ in\n\ increasing\ order\ of\ time\ elapsed\ and\ unaltered\n\n\ @return\ array\ containing\ the\ lower\ and\ upper\ inner\ fences,\ \n\ in\ that\ order,\ in\ intervalAverageTemp\n
+comment7.params=
+comment7.target=java.util.List\ filterOutliers()
+comment7.text=\n\ Removes\ outliers\ from\ the\ list\ of\ measurement\ samples\ in\ intervalAverageTemps.\n\ The\ outliers\ are\ determined\ by\ the\ information\ provided\ by\ findFenceBounds.\n\ The\ removed\ outliers\ are\ returned.\n\n\ @precondition\ intervalAverageTemps\ is\ non-null\ and\ will\ always\ contain\ measurements\n\ in\ increasing\ order\ of\ time\ elapsed\n\ @postcondition\ the\ measurements\ in\ intervalAverageTemp\ remain\ in\ increasing\ order\n\ of\ time\ elapsed\n\n\ @return\ list\ of\ outlier\ measurements\ removed\ from\ intervalAverageTemps\n
+numComments=8
